@@ -3,7 +3,7 @@
 ### 1: dependency
 * dependencies: *array* - list of dependency object ids
 
-### 2: setLineWidth
+### 2: <a name="#set-line-width">setLineWidth</a>
 * width: *number*
 
 sets line width
@@ -45,7 +45,7 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L893
 
 ### 9: setGState
-* states: *array* - An array of key-value pairs where the first element of the pair is the key and the second element is the value. Keys may be any of the following: 
+* states: *array* - An array of key-value pairs where the first element of the pair is the key and the second element is the value. Keys may be any of the following: LW ([setLineWidth](#set-line-width))
 
 ### 10: save
 * *no parameters*
