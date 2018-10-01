@@ -34,18 +34,18 @@ see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContex
 
 sets the line dash pattern used when stroking lines, using an array of values which specify alternating lengths of lines and gaps which describe the pattern
 
-### 7: setRenderingIntent
+### 7: setRenderingIntent // todo
 * intent: ?
 
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L888
 
-### 8: setFlatness
+### 8: setFlatness // todo
 * flatness: ?
 
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L893
 
 ### 9: setGState
-* states: array
+* states: *array* - An array of key-value pairs where the first element of the pair is the key and the second element is the value. Keys may be any of the following: 
 
 ### 10: save
 * *no parameters*
@@ -195,15 +195,20 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
 ### 57: setFillGray: 57, // ??
 
 ### 58: setStrokeRGBColor
-* r: ?
-* g: ?
-* b: ?
+* r: *number* - value between 0 and 255
+* g: *number* - value between 0 and 255
+* b: *number* - value between 0 and 255
 
-### 59: setFillRGBColor(r, g, b) {}
+### 59: setFillRGBColor
+* r: *number* - value between 0 and 255
+* g: *number* - value between 0 and 255
+* b: *number* - value between 0 and 255
 
-### 60: setStrokeCMYKColor: 60, // ??
+### 60: setStrokeCMYKColor
+currently unused
 
-### 61: setFillCMYKColor: 61, // ??
+### 61: setFillCMYKColor
+currently unused
 
 ### 62: shadingFill
 * patternIR: ?
@@ -212,7 +217,8 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
 
 ### 64: beginImageData() {} // unreachable
 
-### 65: endInlineImage: 65, // ??
+### 65: endInlineImage
+currenty unused
 
 ### 66: paintXObject() {} // unsupported
 
