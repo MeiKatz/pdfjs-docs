@@ -1,12 +1,15 @@
 # Documentation for Mozilla's PDF.js library
 ## Operations
-### 1: dependency(dependencies: array)
+### 1: dependency
+* dependencies: *array*
 dependencies: list of dependency object ids
 
-### 2: setLineWidth(width: number)
+### 2: setLineWidth
+* width: *number*
 sets line width
 
-### 3: setLineCap(style: number)
+### 3: setLineCap
+* style: *number* - either 0 (butt), 1 (round), or 2 (square)
 sets line cap style; determines how the end points of every line are drawn; can be either 0, 1, or 2:
 * 0 = "butt"
 * 1 = "round"
@@ -14,7 +17,8 @@ sets line cap style; determines how the end points of every line are drawn; can 
 
 see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap
 
-### 4: setLineJoin(style: number)
+### 4: setLineJoin
+* style: *number* - either 0 (miter), 1 (round), or 2 (bevel)
 sets line join style; determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together; can be either 0, 1, or 2:
 * 0 = "miter"
 * 1 = "round"
@@ -22,17 +26,21 @@ sets line join style; determines how two connecting segments (of lines, arcs or 
 
 see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin
 
-### 5: setMiterLimit(limit: number)
+### 5: setMiterLimit
+* limit: *number*
 sets the miter limit ratio in space units
 
 see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit
 
-### 6: setDash(dashArray: array, dashPhase: number)
+### 6: setDash
+* dashArray: *array*
+* dashPhase: *number*
 sets the line dash pattern used when stroking lines, using an array of values which specify alternating lengths of lines and gaps which describe the pattern
 * dashArray: An Array of numbers which specify distances to alternately draw a line and a gap (in coordinate space units). If the number of elements in the array is odd, the elements of the array get copied and concatenated; see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
 * dashPhase: A float specifying the amount of the offset; see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset
 
-### 7: setRenderingIntent(intent: ?)
+### 7: setRenderingIntent
+* intent: ?
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L888
 
 ### 8: setFlatness(flatness: ?)
