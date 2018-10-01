@@ -9,13 +9,13 @@
 sets line width
 
 ### 3: setLineCap
-* style: *number* - either 0 (butt), 1 (round), or 2 (square)
+* style: *number* - either `0` (butt), `1` (round), or `2` (square)
 sets line cap style; determines how the end points of every line are drawn;
 
 see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap
 
 ### 4: setLineJoin
-* style: *number* - either 0 (miter), 1 (round), or 2 (bevel)
+* style: *number* - either `0` (miter), `1` (round), or `2` (bevel)
 
 sets line join style; determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together;
 
@@ -45,7 +45,7 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L893
 
 ### 9: setGState
-* states: *array* - An array of key-value pairs where the first element of the pair is the key and the second element is the value. Keys may be any of the following: LW ([setLineWidth](#2-setlinewidth))
+* states: *array* - An array of key-value pairs where the first element of the pair is the key and the second element is the value. Keys may be any of the following: `LW` ([setLineWidth](#2-setlinewidth)), `LC` ([setLineCap](#3-setlinecap)), `LJ` ([setLineJoin](#4-setlinejoin)), `ML` ([setMiterLimit](#5-setmiterlimit)), `D` ([setDash](#6-setdash)), `RI` ([setRenderIndent](#7-setrenderindent)), `FL` ([setFlatness](#8-setflatness)), `Font` ([setFont](#37-setfont)), `CA` (stroke alpha), `ca` (fill alpha), `BM` (global composite operation), or `SMask`.
 
 ### 10: save
 * *no parameters*
