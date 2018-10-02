@@ -38,12 +38,14 @@ see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContex
 
 sets the line dash pattern used when stroking lines, using an array of values which specify alternating lengths of lines and gaps which describe the pattern
 
-### 7: setRenderingIntent // todo
+### 7: setRenderingIntent
+// todo
 * `intent`: ?
 
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L888
 
-### 8: setFlatness // todo
+### 8: setFlatness
+// todo
 * `flatness`: ?
 
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L893
@@ -56,7 +58,7 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
   * `LJ` ([setLineJoin](#4-setlinejoin))
   * `ML` ([setMiterLimit](#5-setmiterlimit))
   * `D` ([setDash](#6-setdash))
-  * `RI` ([setRenderIndent](#7-setrenderindent))
+  * `RI` ([setRenderingIndent](#7-setrenderingindent))
   * `FL` ([setFlatness](#8-setflatness))
   * `Font` ([setFont](#37-setfont))
   * `CA` (stroke alpha)
