@@ -70,29 +70,35 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
 *no parameters*
 
 Saves the following properties:
-* alpha is shape (only canvas)
-* font size
-* font size scale
-* font weight (only svg)
-* text matrix
-* text matrix scale
-* font matrix
+* font
+  * font size
+  * font size scale
+  * font weight (only svg)
+  * font matrix
+* text
+  * text matrix
+  * text matrix scale
+  * text horizontal scale
+  * text rendering mode
+  * text rise
+* spacing
+  * character spacing
+  * word spacing
+* color
+  * fill color
+  * stroke color
+* alpha
+  * alpha is shape (only canvas)
+  * fill alpha
+  * stroke alpha
+* line
+  * line width
+  * line join (only svg)
+  * line cap (only svg)
 * leading ?
+* pattern fill ?
 * current point (x, y) (in user coordinates)
 * start of text line (x, y) (in text coordinates)
-* character spacing
-* word spacing
-* text horizontal scale
-* text rendering mode
-* text rise
-* fill color
-* stroke color
-* pattern fill ?
-* fill alpha
-* stroke alpha
-* line width
-* line join (only svg)
-* line cap (only svg)
 * active s-mask
 * resume s-mask context
 * dash array (only svg)
