@@ -91,19 +91,22 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
 ### 17: curveTo3(/* ??? */) //
 
 ### 18: closePath(/* ??? */) //
+Causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start.
 
 ### 19: rectangle(/* ??? */) //
 
 ### 20: stroke
-* `consumePath`: ?
+* `consumePath`: *`boolean`*
 
 Draws the shape by stroking its outline.
 
 ### 21: closeStroke
 *no parameters*
 
+Same as [closePath](#18-closepath) followed by a [stroke](#20-stroke) called with `true` as argument.
+
 ### 22: fill
-* `consumePath`: ?
+* `consumePath`: *`boolean`*
 
 Draws a solid shape by filling the path's content area.
 
