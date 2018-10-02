@@ -58,7 +58,7 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
   * `LJ` ([setLineJoin](#4-setlinejoin))
   * `ML` ([setMiterLimit](#5-setmiterlimit))
   * `D` ([setDash](#6-setdash))
-  * `RI` ([setRenderingIndent](#7-setrenderingindent))
+  * `RI` ([setRenderingIntent](#7-setrenderingintent))
   * `FL` ([setFlatness](#8-setflatness))
   * `Font` ([setFont](#37-setfont))
   * `CA` (stroke alpha)
