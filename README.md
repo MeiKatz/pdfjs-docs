@@ -49,7 +49,20 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L893
 
 ### 9: setGState
-* `states`: *`array`* - An array of key-value pairs where the first element of the pair is the key and the second element is the value. Keys may be any of the following: `LW` ([setLineWidth](#2-setlinewidth)), `LC` ([setLineCap](#3-setlinecap)), `LJ` ([setLineJoin](#4-setlinejoin)), `ML` ([setMiterLimit](#5-setmiterlimit)), `D` ([setDash](#6-setdash)), `RI` ([setRenderIndent](#7-setrenderindent)), `FL` ([setFlatness](#8-setflatness)), `Font` ([setFont](#37-setfont)), `CA` (stroke alpha), `ca` (fill alpha), `BM` (global composite operation), or `SMask`.
+* `states`: *`array`* - An array of key-value pairs where the first element of the pair is the key and the second element is the value.
+  Keys may be any of the following:
+  * `LW` ([setLineWidth](#2-setlinewidth))
+  * `LC` ([setLineCap](#3-setlinecap))
+  * `LJ` ([setLineJoin](#4-setlinejoin))
+  * `ML` ([setMiterLimit](#5-setmiterlimit))
+  * `D` ([setDash](#6-setdash))
+  * `RI` ([setRenderIndent](#7-setrenderindent))
+  * `FL` ([setFlatness](#8-setflatness))
+  * `Font` ([setFont](#37-setfont))
+  * `CA` (stroke alpha)
+  * `ca` (fill alpha)
+  * `BM` (global composite operation)
+  * `SMask`.
 
 ### 10: save
 *no parameters*
