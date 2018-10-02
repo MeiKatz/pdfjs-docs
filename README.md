@@ -112,6 +112,8 @@ Saves the following properties:
 ### 11: restore
 *no parameters*
 
+Restores the [previously saved values](#10-save).
+
 ### 12: transform
 * `horizScaling`: *`number`*
 * `horizSkewing`: *`number`*
