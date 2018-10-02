@@ -97,11 +97,15 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
 ### 20: stroke
 * `consumePath`: ?
 
+Draws the shape by stroking its outline.
+
 ### 21: closeStroke
 *no parameters*
 
 ### 22: fill
 * `consumePath`: ?
+
+Draws a solid shape by filling the path's content area.
 
 ### 23: eoFill
 *no parameters*
