@@ -145,7 +145,7 @@ Draws the shape by stroking its outline.
 ### 21: closeStroke
 *no parameters*
 
-Same as [closePath](#18-closepath) followed by a [stroke](#20-stroke) called with `true` as argument.
+Same as [`closePath`](#18-closepath) followed by a [`stroke`](#20-stroke).
 
 ### 22: fill
 *no parameters*
