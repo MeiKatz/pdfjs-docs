@@ -173,8 +173,12 @@ Draws a solid shape by filling the path's content area.
 ### 29: clip
 *no parameters*
 
+Turns the path currently being built into the current clipping path. Uses the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule) for clipping.
+
 ### 30: eoClip
 *no parameters*
+
+Turns the path currently being built into the current clipping path. Uses the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) for clipping.
 
 ### 31: beginText
 *no parameters*
