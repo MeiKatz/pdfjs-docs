@@ -179,6 +179,8 @@ Draws a solid shape by filling the path's content area.
 ### 31: beginText
 *no parameters*
 
+Resets the text matrix, the pointer position (x and y), and the line position (x and y). Starts a new text area.
+
 ### 32: endText
 *no parameters*
 
