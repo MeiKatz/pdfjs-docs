@@ -193,7 +193,7 @@ Turns the path currently being built into the current clipping path. Uses the [e
 ### 31: beginText
 *no parameters*
 
-Resets the text matrix, the pointer position (x and y), and the line position (x and y). Starts a new text area.
+Resets the text matrix, the pointer position (x and y), and the line position (x and y). Starts a new text block.
 
 ### 32: endText
 *no parameters*
