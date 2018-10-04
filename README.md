@@ -138,7 +138,7 @@ Causes the point of the pen to move back to the start of the current sub-path. I
 ### 19: rectangle(/* ??? */) //
 
 ### 20: stroke
-* `consumePath`: *`boolean`*
+*no parameters*
 
 Draws the shape by stroking its outline.
 
@@ -148,7 +148,7 @@ Draws the shape by stroking its outline.
 Same as [closePath](#18-closepath) followed by a [stroke](#20-stroke) called with `true` as argument.
 
 ### 22: fill
-* `consumePath`: *`boolean`*
+*no parameters*
 
 Fills the current path with the current fill style (color and opacity) using the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule).
 
