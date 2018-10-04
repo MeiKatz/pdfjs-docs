@@ -180,6 +180,8 @@ Same as [`closePath`](#18-closepath) followed by a [`eoFillStroke`](#25-eofillst
 ### 28: endPath
 *no parameters*
 
+Finalize all current path operations and run pending actions.
+
 ### 29: clip
 *no parameters*
 
@@ -193,10 +195,12 @@ Turns the path currently being built into the current clipping path. Uses the [e
 ### 31: beginText
 *no parameters*
 
-Resets the text matrix, the pointer position (x and y), and the line position (x and y). Starts a new text block.
+Starts a new text block. Resets the text matrix, the pointer position (x and y), and the line position (x and y).
 
 ### 32: endText
 *no parameters*
+
+Finalize all current text operations and run pending actions.
 
 ### 33: setCharSpacing
 * `spacing`: *`number`*
