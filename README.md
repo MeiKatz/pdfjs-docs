@@ -150,22 +150,32 @@ Same as [closePath](#18-closepath) followed by a [stroke](#20-stroke) called wit
 ### 22: fill
 * `consumePath`: *`boolean`*
 
-Draws a solid shape by filling the path's content area.
+Fills the current path with the current fill style (color and opacity) using the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule).
 
 ### 23: eoFill
 *no parameters*
 
+Fills the current path with the current fill style (color and opacity) using the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+
 ### 24: fillStroke
 *no parameters*
+
+Same as [`fill`](#22-fill) and [`stroke`](#20-stroke) but in one operation.
 
 ### 25: eoFillStroke
 *no parameters*
 
+Same as [`eoFill`](#23-eofill) and [`stroke`](#20-stroke) but in one operation.
+
 ### 26: closeFillStroke
 *no parameters*
 
+Same as [`closePath`](#18-closepath) followed by a [`fillStroke`](#24-fillstroke) but in one operation.
+
 ### 27: closeEOFillStroke
 *no parameters*
+
+Same as [`closePath`](#18-closepath) followed by a [`eoFillStroke`](#25-eofillstroke) but in one operation.
 
 ### 28: endPath
 *no parameters*
