@@ -132,7 +132,7 @@ Restores the [previously saved values](#10-save).
 
 ### 17: curveTo3(/* ??? */) //
 
-### 18: closePath(/* ??? */) //
+### 18: closePath
 Causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start.
 
 ### 19: rectangle(/* ??? */) //
