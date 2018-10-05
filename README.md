@@ -591,7 +591,9 @@ Show one or more text strings, allowing individual glyph positioning. Each eleme
 
 ### 46: nextLineShowText (`'`)
 #### Operands
-* `string`: *`string`*
+Operands differ between the PDF specification and the implementation in PDF.js.
+* `string`: *`string`* (PDF Specification)
+* `glyphs`: *`array`* (implementation in PDF.js)
 
 #### PDF Specification
 Move to the next line and show a text string. This operator shall have the same effect as the code
@@ -606,9 +608,11 @@ string Tj
 
 ### 47: nextLineSetSpacingShowText (`"`)
 #### Operands
+Operands differ between the PDF specification and the implementation in PDF.js.
 * `aw`: *`number`*
 * `ac`: *`number`*
-* `string`: *`string`*
+* `string`: *`string`* (PDF Specification)
+* `glyphs`: *`array`* (implementation in PDF.js)
 
 #### PDF Specification
 Move to the next line and show a text string, using `aw` as the word spacing and `ac` as the character spacing (setting the corresponding parameters in the text state). `aw` and `ac` shall be numbers expressed in unscaled text space units. This operator shall have the same effect as this code:
