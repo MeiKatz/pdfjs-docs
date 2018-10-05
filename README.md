@@ -315,7 +315,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 *none*
 
 #### PDF Specification
-[Fill](#22-fill) and then [stroke](#20-stroke) the path, using the nonzero winding number rule to determine the region to fill. This operator  shall produce the same result as constructing two identical path objects, painting the first with `f` and the second with `S`.
+[Fill](#22-fill) and then [stroke](#20-stroke) the path, using the [nonzero winding number rule](http://en.wikipedia.org/wiki/Nonzero-rule) to determine the region to fill. This operator  shall produce the same result as constructing two identical path objects, painting the first with `f` and the second with `S`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
