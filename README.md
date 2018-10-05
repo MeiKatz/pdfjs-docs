@@ -264,8 +264,11 @@ h
 
 Draws the shape by stroking its outline.
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+#### PDF Specification
+Stroke the path.
+
+#### Source
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2843](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2843)
 
 ### 21: closeStroke (`s`)
@@ -273,8 +276,11 @@ Source:
 
 Same as [`closePath`](#18-closepath) followed by a [`stroke`](#20-stroke).
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+#### PDF Specification
+Close and stroke the path. This operator shall have the same effect as the sequence `h S`. 
+
+#### Source
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2844](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2844)
 
 ### 22: fill (`f` / `F`)
@@ -283,7 +289,7 @@ Source:
 Fills the current path with the current fill style (color and opacity) using the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule).
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2845-L2846](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2845-L2846)
 
 ### 23: eoFill (`f*`)
@@ -291,8 +297,11 @@ Source:
 
 Fills the current path with the current fill style (color and opacity) using the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+#### PDF Specification
+Fill the path, using the even-odd rule to determine the region to fill.
+
+#### Source
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 * 
 
 ### 24: fillStroke (`B`)
@@ -300,8 +309,11 @@ Source:
 
 Same as [`fill`](#22-fill) and [`stroke`](#20-stroke) but in one operation.
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+#### PDF Specification
+Fill and then stroke the path, using the nonzero winding number rule to determine the region to fill. This operator  shall produce the same result as constructing two identical path objects, painting the first with `f` and the second with `S`.
+
+#### Source
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 *
 
 ### 25: eoFillStroke (`B*`)
@@ -309,8 +321,11 @@ Source:
 
 Same as [`eoFill`](#23-eofill) and [`stroke`](#20-stroke) but in one operation.
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+#### PDF Specification
+Fill and then stroke the path, using the even-odd rule to determine the region to fill. This operator shall produce the same result as `B`, except that the path is  filled  as  if  with `f*` instead of `f`.
+
+#### Source
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 *
 
 ### 26: closeFillStroke (`b`)
@@ -318,8 +333,11 @@ Source:
 
 Same as [`closePath`](#18-closepath) followed by a [`fillStroke`](#24-fillstroke) but in one operation.
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+#### PDF Specification
+Close, fill, and then stroke the path, using the nonzero winding number rule to determine the region to fill. This operator shall have the same effect as the sequence `h B`.
+
+#### Source
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 * 
 
 ### 27: closeEOFillStroke (`b*`)
@@ -327,8 +345,11 @@ Source:
 
 Same as [`closePath`](#18-closepath) followed by a [`eoFillStroke`](#25-eofillstroke) but in one operation.
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+#### PDF Specification
+Close, fill, and then stroke the path, using the even-odd rule to determine the region to fill. This operator shall have the same effect as the sequence `h B*`.
+
+#### Source
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 * 
 
 ### 28: endPath (`n`)
@@ -336,8 +357,11 @@ Source:
 
 Finalize all current path operations and run pending actions.
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646
+#### PDF Specification
+End the path object without filling or stroking it. This operator shall be a path-painting no-op, used primarily for  the side effect of changing the current clipping path.
+
+#### Source
+* [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 *
 
 ### 29: clip (`W`)
