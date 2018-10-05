@@ -448,25 +448,48 @@ Source:
 * ?
 * ? // variable
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
+
 ### 55: setFillColorN (`scn`)
 * ? (33) // variable
-*no parameters*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
 
 ### 56: setStrokeGray (`G`)
 * ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
+
 ### 57: setFillGray (`g`)
 * ?
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
 
 ### 58: setStrokeRGBColor (`RG`)
 * `r`: *`number`* - value between 0 and 255
 * `g`: *`number`* - value between 0 and 255
 * `b`: *`number`* - value between 0 and 255
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
+
 ### 59: setFillRGBColor (`rg`)
 * `r`: *`number`* - value between 0 and 255
 * `g`: *`number`* - value between 0 and 255
 * `b`: *`number`* - value between 0 and 255
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
 
 ### 60: setStrokeCMYKColor (`K`)
 * ?
@@ -474,14 +497,26 @@ Source:
 * ?
 * ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
+
 ### 61: setFillCMYKColor (`k`)
 * ?
 * ?
 * ?
 * ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
+
 ### 62: shadingFill (`sh`)
 * `patternIR`: ?
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1851121
+*
 
 ### 63: beginInlineImage (`BI`)
 *no parameters*
