@@ -512,10 +512,10 @@ Source:
 ### 71: endMarkedContent (`EMC`)
 *no parameters*
 
-### 72: beginCompat // compatibility
+### 72: beginCompat (`BX`)
 *no parameters*
 
-### 73: endCompat // compatibility
+### 73: endCompat (`EX`)
 *no parameters*
 
 ### 74: paintFormXObjectBegin
