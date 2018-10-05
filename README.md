@@ -159,6 +159,7 @@ Source:
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2833](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2833)
 
 ### 13: moveTo (`m`)
+#### Operands
 * `x`: *`number`*
 * `y`: *`number`*
 
@@ -170,6 +171,7 @@ Begin a new subpath by moving the current point to coordinates (`x`, `y`), omitt
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2836](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2836)
 
 ### 14: lineTo (`l`)
+#### Operands
 * `x`: *`number`*
 * `y`: *`number`*
 
@@ -181,6 +183,7 @@ Append a straight line segment from the current point to the point (`x`, `y`). T
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2837](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2837)
 
 ### 15: curveTo (`c`)
+#### Operands
 * `x1`: *`number`*
 * `y1`: *`number`*
 * `x2`: *`number`*
@@ -196,6 +199,7 @@ Append a cubic Bézier curve to the current path. The curve shall extend from th
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2838](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2838)
 
 ### 16: curveTo2 (`v`)
+#### Operands
 * `x2`: *`number`*
 * `y2`: *`number`*
 * `x3`: *`number`*
@@ -209,6 +213,7 @@ Append a cubic Bézier curve to the current path. The curve shall extend from th
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2839](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2839)
 
 ### 17: curveTo3 (`y`)
+#### Operands
 * `x1`: *`number`*
 * `y1`: *`number`*
 * `x3`: *`number`*
@@ -235,6 +240,7 @@ This operator terminates the current subpath. Appending another segment to the c
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2841](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2841)
 
 ### 19: rectangle (`re`)
+#### Operands
 * `x`: *`number`*
 * `y`: *`number`*
 * `width`: *`number`*
@@ -260,7 +266,8 @@ h
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2842](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2842)
 
 ### 20: stroke (`S`)
-*no parameters*
+#### Operands
+*none*
 
 Draws the shape by stroking its outline.
 
@@ -272,7 +279,8 @@ Stroke the path.
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2843](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2843)
 
 ### 21: closeStroke (`s`)
-*no parameters*
+#### Operands
+*none*
 
 Same as [`closePath`](#18-closepath) followed by a [`stroke`](#20-stroke).
 
@@ -284,16 +292,21 @@ Close and stroke the path. This operator shall have the same effect as the seque
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2844](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2844)
 
 ### 22: fill (`f` / `F`)
-*no parameters*
+#### Operands
+*none*
 
 Fills the current path with the current fill style (color and opacity) using the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule).
 
-Source:
+#### PDF Specification
+Fill the path, using the nonzero winding number rule to determine the region to fill. Any subpaths that are open shall be implicitly closed before being filled.
+
+#### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2845-L2846](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2845-L2846)
 
 ### 23: eoFill (`f*`)
-*no parameters*
+#### Operands
+*none*
 
 Fills the current path with the current fill style (color and opacity) using the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
@@ -305,7 +318,8 @@ Fill the path, using the even-odd rule to determine the region to fill.
 * 
 
 ### 24: fillStroke (`B`)
-*no parameters*
+#### Operands
+*none*
 
 Same as [`fill`](#22-fill) and [`stroke`](#20-stroke) but in one operation.
 
@@ -317,7 +331,8 @@ Fill and then stroke the path, using the nonzero winding number rule to determin
 *
 
 ### 25: eoFillStroke (`B*`)
-*no parameters*
+#### Operands
+*none*
 
 Same as [`eoFill`](#23-eofill) and [`stroke`](#20-stroke) but in one operation.
 
@@ -329,7 +344,8 @@ Fill and then stroke the path, using the even-odd rule to determine the region t
 *
 
 ### 26: closeFillStroke (`b`)
-*no parameters*
+#### Operands
+*none*
 
 Same as [`closePath`](#18-closepath) followed by a [`fillStroke`](#24-fillstroke) but in one operation.
 
@@ -341,7 +357,8 @@ Close, fill, and then stroke the path, using the nonzero winding number rule to 
 * 
 
 ### 27: closeEOFillStroke (`b*`)
-*no parameters*
+#### Operands
+*none*
 
 Same as [`closePath`](#18-closepath) followed by a [`eoFillStroke`](#25-eofillstroke) but in one operation.
 
@@ -353,7 +370,8 @@ Close, fill, and then stroke the path, using the even-odd rule to determine the 
 * 
 
 ### 28: endPath (`n`)
-*no parameters*
+#### Operands
+*none*
 
 Finalize all current path operations and run pending actions.
 
