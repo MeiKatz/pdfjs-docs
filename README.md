@@ -51,17 +51,25 @@ Source:
 
 sets the line dash pattern used when stroking lines, using an array of values which specify alternating lengths of lines and gaps which describe the pattern
 
+Source:
+*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2827](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2827)
+
 ### 7: setRenderingIntent (`ri`)
 // todo
 * `intent`: ?
 
-unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L888
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2828](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2828)
 
 ### 8: setFlatness (`i`)
 // todo
 * `flatness`: ?
 
-unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L893
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2829](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2829)
 
 ### 9: setGState (`gs`)
 * `states`: *`array`* - An array of key-value pairs where the first element of the pair is the key and the second element is the value.
@@ -78,6 +86,10 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
   * `ca` (fill alpha)
   * `BM` (global composite operation)
   * `SMask`.
+
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2830](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2830)
 
 ### 10: save (`q`)
 *no parameters*
@@ -121,11 +133,18 @@ Saves the following properties:
 * clip group (only svg)
 * mask id (only svg)
 
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2831](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2831)
 
 ### 11: restore (`Q`)
 *no parameters*
 
 Restores the [previously saved values](#10-save).
+
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2832](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2832)
 
 ### 12: transform (`cm`)
 * `horizScaling`: *`number`*
@@ -135,9 +154,25 @@ Restores the [previously saved values](#10-save).
 * `horizMoving`: *`number`*
 * `vertMoving`: *`number`*
 
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2833](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2833)
+
 ### 13: moveTo (`m`)
+* ?
+* ?
+
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2836](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2836)
 
 ### 14: lineTo (`l`)
+* ?
+* ?
+
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2837](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2837)
 
 ### 15: curveTo (`c`)
 * ?
@@ -147,11 +182,19 @@ Restores the [previously saved values](#10-save).
 * ?
 * ?
 
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2838](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2838)
+
 ### 16: curveTo2 (`v`)
 * ?
 * ?
 * ?
 * ?
+
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2839](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2839)
 
 ### 17: curveTo3 (`y`)
 * ?
@@ -159,8 +202,16 @@ Restores the [previously saved values](#10-save).
 * ?
 * ?
 
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2840](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2840)
+
 ### 18: closePath (`h`)
 Causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start.
+
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2841](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2841)
 
 ### 19: rectangle (`re`)
 * `x`: `number`
@@ -170,22 +221,34 @@ Causes the point of the pen to move back to the start of the current sub-path. I
 
 Source:
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
-* https://github.com/mozilla/pdf.js/blob/master/src/core/evaluator.js#L2842
+* h[https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2842](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2842)
 
 ### 20: stroke (`S`)
 *no parameters*
 
 Draws the shape by stroking its outline.
 
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2843](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2843)
+
 ### 21: closeStroke (`s`)
 *no parameters*
 
 Same as [`closePath`](#18-closepath) followed by a [`stroke`](#20-stroke).
 
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2844](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2844)
+
 ### 22: fill (`f` / `F`)
 *no parameters*
 
 Fills the current path with the current fill style (color and opacity) using the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule).
+
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2845-L2846](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2845-L2846)
 
 ### 23: eoFill (`f*`)
 *no parameters*
