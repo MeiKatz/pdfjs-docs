@@ -308,7 +308,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2847](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2847)
 
 ### 24: fillStroke (`B`)
 #### Operands
@@ -319,7 +319,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2848](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2848)
 
 ### 25: eoFillStroke (`B*`)
 #### Operands
@@ -330,7 +330,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2849](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2849)
 
 ### 26: closeFillStroke (`b`)
 #### Operands
@@ -341,7 +341,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2850](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2850)
 
 ### 27: closeEOFillStroke (`b*`)
 #### Operands
@@ -352,7 +352,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2851](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2851)
 
 ### 28: endPath (`n`)
 #### Operands
@@ -363,7 +363,7 @@ End the path object without filling or stroking it. This operator shall be a pat
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2852](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2852)
 
 ### 29: clip (`W`)
 #### Operands
@@ -374,7 +374,7 @@ Modify the current clipping path by intersecting it with the current path, using
 
 #### Source
 * [PDF Specification / Table 61 – Clipping Path Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1850168)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2855](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2855)
 
 ### 30: eoClip (`W*`)
 #### Operands
@@ -385,7 +385,7 @@ Modify the current clipping path by intersecting it with the current path, using
 
 #### Source
 * [PDF Specification / Table 61 – Clipping Path Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1850168)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2856](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2856)
 
 ### 31: beginText (`BT`)
 #### Operands
@@ -396,7 +396,7 @@ Begin a text object, initializing the text matrix and the text line matrix to th
 
 #### Source
 * [PDF Specification / Table 107 – Text object operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2859](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2859)
 
 ### 32: endText (`ET`)
 #### Operands
@@ -407,7 +407,7 @@ End a text object, discarding the text matrix.
 
 #### Source
 * [PDF Specification / Table 107 – Text object operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2860](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2860)
 
 ### 33: setCharSpacing (`Tc`)
 #### Operands
@@ -418,7 +418,7 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2861](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2861)
 
 ### 34: setWordSpacing (`Tw`)
 #### Operands
@@ -426,7 +426,7 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2862](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2862)
 
 ### 35: setHScale (`Tz`)
 #### Operands
@@ -434,7 +434,7 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2863](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2863)
 
 ### 36: setLeading (`TL`)
 #### Operands
@@ -442,7 +442,7 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2864](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2864)
 
 ### 37: setFont (`Tf`)
 #### Operands
@@ -451,7 +451,7 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2865](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2865)
 
 ### 38: setTextRenderingMode (`Tr`)
 #### Operands
@@ -459,7 +459,7 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2866](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2866)
 
 ### 39: setTextRise (`Ts`)
 #### Operands
@@ -467,7 +467,7 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2868](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2868)
 
 ### 40: moveText (`Td`)
 * `x`: *`number`*
@@ -475,7 +475,7 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 
 Source:
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2869](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2869)
 
 ### 41: setLeadingMoveText (`TD`)
 * `x`: *`number`*
