@@ -424,6 +424,9 @@ Set the character spacing to `charSpace`, which shall be a number expressed in u
 #### Operands
 * `wordSpace`: *`number`*
 
+#### PDF Specification
+Set the word spacing to `wordSpace`, which shall be a number expressed in unscaled text space units. Word spacing shall be used by the **`Tj`** *([`showText`](#44-showText-tj))*, **`TJ`** *([`showSpacedText`](#45-showspacedtext-tj))*, and **`'`** *([`nextLineShowText`](#46-nextlineshowtext-))* operators. Initial value: `0`.
+
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2862](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2862)
