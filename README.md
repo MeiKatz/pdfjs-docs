@@ -4,44 +4,49 @@
 * `dependencies`: *`array`* - list of dependency object ids
 
 ### 2: setLineWidth (`w`)
+#### Operands
 * `width`: *`number`*
 
 sets line width
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2823](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2823)
 
 ### 3: setLineCap (`J`)
+#### Operands
 * `style`: *`number`* - either `0` (butt), `1` (round), or `2` (square)
 sets line cap style; determines how the end points of every line are drawn;
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2824](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2824)
 * https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap
 
 ### 4: setLineJoin (`j`)
+#### Operands
 * `style`: *`number`* - either `0` (miter), `1` (round), or `2` (bevel)
 
 sets line join style; determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together;
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2825](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2825)
 * https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin
 
 ### 5: setMiterLimit (`M`)
+#### Operands
 * `limit`: *`number`*
 
 sets the miter limit ratio in space units
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2826](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2826)
 * https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit
 
 ### 6: setDash (`d`)
+#### Operands
 * `dashArray`: *`array`* - An Array of numbers which specify distances to alternately draw a line and a gap (in coordinate space units). If the number of elements in the array is odd, the elements of the array get copied and concatenated;
 
   see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
@@ -51,27 +56,30 @@ Source:
 
 sets the line dash pattern used when stroking lines, using an array of values which specify alternating lengths of lines and gaps which describe the pattern
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2827](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2827)
 
 ### 7: setRenderingIntent (`ri`)
+#### Operands
 // todo
 * `intent`: ?
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2828](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2828)
 
 ### 8: setFlatness (`i`)
+#### Operands
 // todo
 * `flatness`: ?
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2829](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2829)
 
 ### 9: setGState (`gs`)
+#### Operands
 * `states`: *`array`* - An array of key-value pairs where the first element of the pair is the key and the second element is the value.
   Keys may be any of the following:
   * `LW` ([setLineWidth](#2-setlinewidth))
@@ -87,12 +95,13 @@ Source:
   * `BM` (global composite operation)
   * `SMask`.
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2830](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2830)
 
 ### 10: save (`q`)
-*no parameters*
+#### Operands
+*none*
 
 Saves the following properties:
 * font
@@ -133,29 +142,31 @@ Saves the following properties:
 * clip group (only svg)
 * mask id (only svg)
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2831](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2831)
 
 ### 11: restore (`Q`)
-*no parameters*
+#### Operands
+*none*
 
 Restores the [previously saved values](#10-save).
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2832](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2832)
 
 ### 12: transform (`cm`)
-* `horizScaling`: *`number`*
-* `horizSkewing`: *`number`*
-* `vertSkewing`: *`number`*
-* `vertScaling`: *`number`*
-* `horizMoving`: *`number`*
-* `vertMoving`: *`number`*
+#### Operands
+* `a` `horizScaling`: *`number`*
+* `b` `horizSkewing`: *`number`*
+* `c` `vertSkewing`: *`number`*
+* `d` `vertScaling`: *`number`*
+* `e` `horizMoving`: *`number`*
+* `f` `vertMoving`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
+#### Source
+* [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2833](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2833)
 
 ### 13: moveTo (`m`)
@@ -660,7 +671,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 * `name`: *`string`*
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 51: setFillColorSpace (`cs`)
@@ -668,7 +679,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 * `name`: *`string`*
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 52: setStrokeColor (`SC`)
@@ -688,7 +699,7 @@ For CMYK color spaces (DeviceCMYK):
 * `k`: *`number`*
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 53: setStrokeColorN (`SCN`)
@@ -699,7 +710,7 @@ or
 * `name`
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 *
 
 ### 54: setFillColor (`sc`)
@@ -710,7 +721,7 @@ or
 * ? // variable
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 55: setFillColorN (`scn`)
@@ -718,73 +729,73 @@ or
 * ? (33) // variable
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 56: setStrokeGray (`G`)
 #### Operands
-* ?
+* `gray`: *`number`* - value between `0.0` (black) and `1.0` (white)
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 57: setFillGray (`g`)
 #### Operands
-* ?
+* `gray`: *`number`* - value between `0.0` (black) and `1.0` (white).
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 58: setStrokeRGBColor (`RG`)
 #### Operands
-* `r`: *`number`* - value between 0 and 255
-* `g`: *`number`* - value between 0 and 255
-* `b`: *`number`* - value between 0 and 255
+* `r`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
+* `g`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
+* `b`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 59: setFillRGBColor (`rg`)
 #### Operands
-* `r`: *`number`* - value between 0 and 255
-* `g`: *`number`* - value between 0 and 255
-* `b`: *`number`* - value between 0 and 255
+* `r`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
+* `g`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
+* `b`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 60: setStrokeCMYKColor (`K`)
 #### Operands
-* ?
-* ?
-* ?
-* ?
+* `c`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
+* `m`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
+* `y`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
+* `k`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 61: setFillCMYKColor (`k`)
 #### Operands
-* ?
-* ?
-* ?
-* ?
+* `c`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
+* `m`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
+* `y`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
+* `k`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * 
 
 ### 62: shadingFill (`sh`)
 #### Operands
-* `patternIR`: ?
+* `name`: *`string`*
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1851121
+* [PDF Specification / Table 77 – Shading Operator](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1851121)
 *
 
 ### 63: beginInlineImage (`BI`)
@@ -795,7 +806,7 @@ or
 Begin an inline image object.
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
+* [PDF Specification / Table 92 – Inline Image Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045)
 * 
 
 ### 64: beginImageData (`ID`)
@@ -806,7 +817,7 @@ Begin an inline image object.
 Begin the image data for an inline image object.
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
+* [PDF Specification / Table 92 – Inline Image Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045)
 *
 
 ### 65: endInlineImage (`EI`)
@@ -817,7 +828,7 @@ Begin the image data for an inline image object.
 End an inline image object.
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
+* [PDF Specification / Table 92 – Inline Image Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045)
 *
 
 ### 66: paintXObject (`Do`)
@@ -828,7 +839,7 @@ End an inline image object.
 Paint the specified XObject. The operand `name` shall appear as a key in the **XObject** subdictionary of the current resource dictionary. The associated value shall be a stream whose **Type** entry, if present, is **XObject**. The effect of **`Do`** depends on the value of the XObject’s Subtype entry, which may be **Image**, **Form**, or **PS** (PostScript XObject). 
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987702
+* [PDF Specification / Table 87 – XObject Operator](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987702)
 *
 
 ### 67: markPoint (`MP`)
@@ -836,7 +847,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 * `tag`: ?
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+* [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
 *
 
 ### 68: markPointProps (`DP`)
@@ -845,7 +856,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 * `properties`: ?
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+* [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
 *
 
 ### 69: beginMarkedContent (`BMC`)
@@ -853,7 +864,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 * `tag`: ?
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+* [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
 *
 
 ### 70: beginMarkedContentProps (`BDC`)
@@ -862,7 +873,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 * `properties`: ?
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+* [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
 * 
 
 ### 71: endMarkedContent (`EMC`)
@@ -870,7 +881,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 *none*
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+* [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
 * 
 
 ### 72: beginCompat (`BX`)
@@ -878,7 +889,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 *none*
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072
+* [PDF Specification / Table 32 – Compatibility operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072)
 *
 
 ### 73: endCompat (`EX`)
@@ -886,7 +897,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 *none*
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072
+* [PDF Specification / Table 32 – Compatibility operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072)
 * 
 
 ### 74: paintFormXObjectBegin
