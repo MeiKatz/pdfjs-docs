@@ -227,7 +227,8 @@ Append a cubic Bézier curve to the current path. The curve shall extend from th
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2840](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2840)
 
 ### 18: closePath (`h`)
-Causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start.
+#### Operands
+*none*
 
 #### PDF Specification
 Close the current subpath by appending a straight line segment from the current point to the starting point of the  
@@ -269,8 +270,6 @@ h
 #### Operands
 *none*
 
-Draws the shape by stroking its outline.
-
 #### PDF Specification
 Stroke the path.
 
@@ -282,10 +281,8 @@ Stroke the path.
 #### Operands
 *none*
 
-Same as [`closePath`](#18-closepath) followed by a [`stroke`](#20-stroke).
-
 #### PDF Specification
-Close and stroke the path. This operator shall have the same effect as the sequence `h S`. 
+[Close](#18-closepath) and [stroke](#20-stroke) the path. This operator shall have the same effect as the sequence `h S`. 
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -295,10 +292,8 @@ Close and stroke the path. This operator shall have the same effect as the seque
 #### Operands
 *none*
 
-Fills the current path with the current fill style (color and opacity) using the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule).
-
 #### PDF Specification
-Fill the path, using the nonzero winding number rule to determine the region to fill. Any subpaths that are open shall be implicitly closed before being filled.
+Fill the path, using the [nonzero winding number rule](http://en.wikipedia.org/wiki/Nonzero-rule) to determine the region to fill. Any subpaths that are open shall be implicitly closed before being filled.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -308,10 +303,8 @@ Fill the path, using the nonzero winding number rule to determine the region to 
 #### Operands
 *none*
 
-Fills the current path with the current fill style (color and opacity) using the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
-
 #### PDF Specification
-Fill the path, using the even-odd rule to determine the region to fill.
+Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule). to determine the region to fill.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -321,10 +314,8 @@ Fill the path, using the even-odd rule to determine the region to fill.
 #### Operands
 *none*
 
-Same as [`fill`](#22-fill) and [`stroke`](#20-stroke) but in one operation.
-
 #### PDF Specification
-Fill and then stroke the path, using the nonzero winding number rule to determine the region to fill. This operator  shall produce the same result as constructing two identical path objects, painting the first with `f` and the second with `S`.
+[Fill](#22-fill) and then [stroke](#20-stroke) the path, using the nonzero winding number rule to determine the region to fill. This operator  shall produce the same result as constructing two identical path objects, painting the first with `f` and the second with `S`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -334,10 +325,8 @@ Fill and then stroke the path, using the nonzero winding number rule to determin
 #### Operands
 *none*
 
-Same as [`eoFill`](#23-eofill) and [`stroke`](#20-stroke) but in one operation.
-
 #### PDF Specification
-Fill and then stroke the path, using the even-odd rule to determine the region to fill. This operator shall produce the same result as `B`, except that the path is  filled  as  if  with `f*` instead of `f`.
+[Fill](#23-eofill) and then [stroke](#20-stroke) the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) to determine the region to fill. This operator shall produce the same result as `B`, except that the path is  filled  as  if  with `f*` instead of `f`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -347,10 +336,8 @@ Fill and then stroke the path, using the even-odd rule to determine the region t
 #### Operands
 *none*
 
-Same as [`closePath`](#18-closepath) followed by a [`fillStroke`](#24-fillstroke) but in one operation.
-
 #### PDF Specification
-Close, fill, and then stroke the path, using the nonzero winding number rule to determine the region to fill. This operator shall have the same effect as the sequence `h B`.
+[Close](#18-closepath), [fill](#22-fill), and then [stroke](#20-stroke) the path, using the [nonzero winding number rule](http://en.wikipedia.org/wiki/Nonzero-rule) to determine the region to fill. This operator shall have the same effect as the sequence `h B`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -360,10 +347,8 @@ Close, fill, and then stroke the path, using the nonzero winding number rule to 
 #### Operands
 *none*
 
-Same as [`closePath`](#18-closepath) followed by a [`eoFillStroke`](#25-eofillstroke) but in one operation.
-
 #### PDF Specification
-Close, fill, and then stroke the path, using the even-odd rule to determine the region to fill. This operator shall have the same effect as the sequence `h B*`.
+[Close](#18-closepath), [fill](#23-eofill), and then [stroke](#20-stroke) the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) to determine the region to fill. This operator shall have the same effect as the sequence `h B*`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -372,8 +357,6 @@ Close, fill, and then stroke the path, using the even-odd rule to determine the 
 ### 28: endPath (`n`)
 #### Operands
 *none*
-
-Finalize all current path operations and run pending actions.
 
 #### PDF Specification
 End the path object without filling or stroking it. This operator shall be a path-painting no-op, used primarily for  the side effect of changing the current clipping path.
