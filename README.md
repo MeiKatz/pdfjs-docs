@@ -447,7 +447,7 @@ Set the horizontal scaling to (`scale` ÷ 100). `scale` shall be a number specif
 * `leading`: *`number`*
 
 #### PDF Specification
-Set the text leading to `leading`, which shall be a number expressed in unscaled text space units. Text leading shall be used only by the **`T*`** *([`nextLine`](#43-nextline-t-))*, **`'`** *([`nextLineShowText`](#46-nextlineshowtext-))*, and **`"`** *([`nextLineSetSpacingShowText`](#47-nextlinesetspacingshowtext-))* operators. Initial value: `0`. 
+Set the text leading to `leading`, which shall be a number expressed in unscaled text space units. Text leading shall be used only by the **`T*`** *([`nextLine`](#43-nextline-t))*, **`'`** *([`nextLineShowText`](#46-nextlineshowtext-))*, and **`"`** *([`nextLineSetSpacingShowText`](#47-nextlinesetspacingshowtext-))* operators. Initial value: `0`. 
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
@@ -458,6 +458,9 @@ Set the text leading to `leading`, which shall be a number expressed in unscaled
 * `font`: *`string`*
 * `size`: *`number`*
 
+#### PDF Specification
+Set the text font to `font` and the text font size to `size`. `font` shall be the name of a font resource in the **Font** subdictionary of the current resource dictionary; `size` shall be a number representing a scale factor. There is no initial value for either `font` or `size`; they shall be specified explicitly by using **`Tf`** before any text is shown.
+
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2865](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2865)
@@ -465,6 +468,9 @@ Set the text leading to `leading`, which shall be a number expressed in unscaled
 ### 38: setTextRenderingMode (`Tr`)
 #### Operands
 * `render`: ?
+
+#### PDF Specification
+Set the text rendering mode to `render`, which shall be an integer. Initial value: `0`.
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
@@ -474,84 +480,141 @@ Set the text leading to `leading`, which shall be a number expressed in unscaled
 #### Operands
 * `rise`: ?
 
+#### PDF Specification
+Set the text rise to `rise`, which shall be a number expressed in unscaled text space units. Initial value: `0`.
+
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2868](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2868)
 
 ### 40: moveText (`Td`)
-* `x`: *`number`*
-* `y`: *`number`*
+#### Operands
+* `tx`: *`number`*
+* `ty`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
+#### PDF Specification
+Move to the start of the next line, offset from the start of the current line by (`tx`, `ty`). `tx` and `ty` shall denote numbers expressed in unscaled text space units. More precisely, this operator shall perform these assignments: 
+```
+           ⎡ 1  0  0 ⎤
+Tm = Tlm = ⎢ 0  1  0 ⎥ ⨯ Tlm
+           ⎣ tx ty 1 ⎦
+
+Tm  = text matrix
+Tlm = text line matrix
+```
+
+#### Source
+* [PDF Specification / Table 108 – Text-positioning operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2869](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2869)
 
 ### 41: setLeadingMoveText (`TD`)
-* `x`: *`number`*
-* `y`: *`number`*
+#### Operands
+* `tx`: *`number`*
+* `ty`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
+#### PDF Specification
+Move to the start of the next line, offset from the start of the current line by (`tx`, `ty`). As a side effect, this operator shall set the leading parameter in the text state. This operator shall have the same effect as this code:
+```
+−ty TL
+tx ty Td
+```
+
+#### Source
+* [PDF Specification / Table 108 – Text-positioning operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331)
 *
 
 ### 42: setTextMatrix (`Tm`)
-* `horizScaling`: *`number`*
-* `horizSkewing`: *`number`*
-* `vertSkewing`: *`number`*
-* `vertScaling`: *`number`*
-* `horizMoving`: *`number`*
-* `vertMoving`: *`number`*
+#### Operands
+* `a` `horizScaling`: *`number`*
+* `b` `horizSkewing`: *`number`*
+* `c` `vertSkewing`: *`number`*
+* `d` `vertScaling`: *`number`*
+* `e` `horizMoving`: *`number`*
+* `f` `vertMoving`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
+#### PDF Specification
+Set the text matrix, **Tm**, and the text line matrix, **Tlm**:
+```
+           ⎡ a d 0 ⎤
+Tm = Tlm = ⎢ b e 0 ⎥
+           ⎣ c f 1 ⎦
+
+Tm  = text matrix
+Tlm = text line matrix
+```
+The operands shall all be numbers, and the initial value for **Tm** and **Tlm** shall be the identity matrix, `[ 1  0  0  1  0  0 ]`. Although the operands specify a matrix, they shall be passed to **Tm** as six separate numbers, not as an array. 
+
+The matrix specified by the operands shall not be concatenated onto the current text matrix, but shall replace it. 
+
+#### Source
+* [PDF Specification / Table 108 – Text-positioning operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331)
 *
 
 ### 43: nextLine (`T*`)
-*no parameters*
+#### Operands
+*none*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
+#### PDF Specification
+Move to the start of the next line. This operator has the same effect as the code 
+```
+0 -Tl Td
+```
+where `Tl` denotes the current leading parameter in the text state. The negative of `Tl` is used here because `Tl` is the text leading expressed as a positive number. Going to the next line entails decreasing the y coordinate.
+
+#### Source
+* [PDF Specification / Table 108 – Text-positioning operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331)
 *
 
 ### 44: showText (`Tj`)
-* `glyphs`: *`array`*
+#### Operands
+Operands differ between the PDF specification and the implementation in PDF.js.
+* `string`: *`string`* (PDF Specification)
+* `glyphs`: *`array`* (implementation in PDF.js)
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300
+#### PDF Specification
+Show a text string.
+
+#### Source
+* [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
 * 
 
 ### 45: showSpacedText (`TJ`)
-* ?
+#### Operands
+* `array`: ?
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300
+#### Source
+* [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
 * 
 
 ### 46: nextLineShowText (`'`)
-* ?
+#### Operands
+* `string`: *`string`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300
+#### Source
+* [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
 *
 
 ### 47: nextLineSetSpacingShowText (`"`)
-* ?
-* ?
-* ?
+#### Operands
+* `aw`: ?
+* `ac`: ?
+* `string`: *`string`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300
+#### Source
+* [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
 *
 
 ### 48: setCharWidth (`d0`)
+#### Operands
 * `xWidth`: *`number`*
 * `yWidth`: *`number`*
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938
 *
 
 ### 49: setCharWidthAndBounds (`d1`)
+#### Operands
 * `xWidth`: *`number`*
 * `yWidth`: *`number`*
 * `llx`: ?
@@ -559,25 +622,28 @@ Source:
 * `urx`: ?
 * `ury`: ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938
 *
 
 ### 50: setStrokeColorSpace (`CS`)
+#### Operands
 * `name`: *`string`*
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 51: setFillColorSpace (`cs`)
+#### Operands
 * `name`: *`string`*
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 52: setStrokeColor (`SC`)
+#### Operands
 For gray color spaces (DeviceGray, CalGray or Indexed):
 * `scale`: *`number`*
 
@@ -592,93 +658,103 @@ For CMYK color spaces (DeviceCMYK):
 * `y`: *`number`*
 * `k`: *`number`*
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 53: setStrokeColorN (`SCN`)
+#### Operands
 * `c1` ... `cn` (`n` <= 32)
 or
 * `c1` ... `cn` (`n` <= 32)
 * `name`
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 *
 
 ### 54: setFillColor (`sc`)
+#### Operands
 * ?
 * ?
 * ?
 * ? // variable
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 55: setFillColorN (`scn`)
+#### Operands
 * ? (33) // variable
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 56: setStrokeGray (`G`)
+#### Operands
 * ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 57: setFillGray (`g`)
+#### Operands
 * ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 58: setStrokeRGBColor (`RG`)
+#### Operands
 * `r`: *`number`* - value between 0 and 255
 * `g`: *`number`* - value between 0 and 255
 * `b`: *`number`* - value between 0 and 255
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 59: setFillRGBColor (`rg`)
+#### Operands
 * `r`: *`number`* - value between 0 and 255
 * `g`: *`number`* - value between 0 and 255
 * `b`: *`number`* - value between 0 and 255
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 60: setStrokeCMYKColor (`K`)
+#### Operands
 * ?
 * ?
 * ?
 * ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 61: setFillCMYKColor (`k`)
+#### Operands
 * ?
 * ?
 * ?
 * ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
 * 
 
 ### 62: shadingFill (`sh`)
+#### Operands
 * `patternIR`: ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1851121
 *
 
@@ -727,53 +803,60 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 *
 
 ### 67: markPoint (`MP`)
+#### Operands
 * `tag`: ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
 *
 
 ### 68: markPointProps (`DP`)
+#### Operands
 * `tag`: ?
 * `properties`: ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
 *
 
 ### 69: beginMarkedContent (`BMC`)
+#### Operands
 * `tag`: ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
 *
 
 ### 70: beginMarkedContentProps (`BDC`)
+#### Operands
 * `tag`: ?
 * `properties`: ?
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
 * 
 
 ### 71: endMarkedContent (`EMC`)
-*no parameters*
+#### Operands
+*none*
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
 * 
 
 ### 72: beginCompat (`BX`)
-*no parameters*
+#### Operands
+*none*
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072
 *
 
 ### 73: endCompat (`EX`)
-*no parameters*
+#### Operands
+*none*
 
-Source:
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072
 * 
 
