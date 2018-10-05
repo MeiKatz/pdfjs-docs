@@ -304,7 +304,7 @@ Fill the path, using the [nonzero winding number rule](http://en.wikipedia.org/w
 *none*
 
 #### PDF Specification
-Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule). to determine the region to fill.
+Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) to determine the region to fill.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -315,7 +315,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 *none*
 
 #### PDF Specification
-[Fill](#22-fill) and then [stroke](#20-stroke-s) the path, using the [nonzero winding number rule](http://en.wikipedia.org/wiki/Nonzero-rule) to determine the region to fill. This operator  shall produce the same result as constructing two identical path objects, painting the first with `f` and the second with `S`.
+[Fill](#22-fill-f--f) and then [stroke](#20-stroke-s) the path, using the [nonzero winding number rule](http://en.wikipedia.org/wiki/Nonzero-rule) to determine the region to fill. This operator  shall produce the same result as constructing two identical path objects, painting the first with `f` and the second with `S`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -326,7 +326,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 *none*
 
 #### PDF Specification
-[Fill](#23-eofill) and then [stroke](#20-stroke-s) the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) to determine the region to fill. This operator shall produce the same result as `B`, except that the path is  filled  as  if  with `f*` instead of `f`.
+[Fill](#23-eofill-f) and then [stroke](#20-stroke-s) the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) to determine the region to fill. This operator shall produce the same result as `B`, except that the path is  filled  as  if  with `f*` instead of `f`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -337,7 +337,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 *none*
 
 #### PDF Specification
-[Close](#18-closepath-h), [fill](#22-fill), and then [stroke](#20-stroke-s) the path, using the [nonzero winding number rule](http://en.wikipedia.org/wiki/Nonzero-rule) to determine the region to fill. This operator shall have the same effect as the sequence `h B`.
+[Close](#18-closepath-h), [fill](#22-fill-f--f), and then [stroke](#20-stroke-s) the path, using the [nonzero winding number rule](http://en.wikipedia.org/wiki/Nonzero-rule) to determine the region to fill. This operator shall have the same effect as the sequence `h B`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -348,7 +348,7 @@ Fill the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80
 *none*
 
 #### PDF Specification
-[Close](#18-closepath-h), [fill](#23-eofill), and then [stroke](#20-stroke-s) the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) to determine the region to fill. This operator shall have the same effect as the sequence `h B*`.
+[Close](#18-closepath-h), [fill](#23-eofill-f), and then [stroke](#20-stroke-s) the path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) to determine the region to fill. This operator shall have the same effect as the sequence `h B*`.
 
 #### Source
 * [PDF Specification / Table 60 – Path-Painting Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987646)
@@ -414,7 +414,7 @@ End a text object, discarding the text matrix.
 * `charSpace`: *`number`*
 
 #### PDF Specification
-Set the character spacing to `charSpace`, which shall be a number expressed in unscaled text space units. Character spacing shall be used by the **`Tj`**, **`TJ`**, and **`'`** operators. Initial value: `0`. 
+Set the character spacing to `charSpace`, which shall be a number expressed in unscaled text space units. Character spacing shall be used by the **`Tj`** ([*`showText`*](#44-showText-tj)), **`TJ`** ([*`showSpacedText`*](#45-showspacedtext-tj), and **`'`** ([*`nextLineShowText`*](#46-nextlineshowtext-)) operators. Initial value: `0`. 
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
