@@ -435,6 +435,9 @@ Set the word spacing to `wordSpace`, which shall be a number expressed in unscal
 #### Operands
 * `scale`: *`number`*
 
+#### PDF Specification
+Set the horizontal scaling to (`scale` ÷ 100). `scale` shall be a number specifying the percentage of the normal width. Initial value: `100` (normal width). 
+
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2863](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2863)
@@ -442,6 +445,9 @@ Set the word spacing to `wordSpace`, which shall be a number expressed in unscal
 ### 36: setLeading (`TL`)
 #### Operands
 * `leading`: *`number`*
+
+#### PDF Specification
+Set the text leading to `leading`, which shall be a number expressed in unscaled text space units. Text leading shall be used only by the **`T*`** *([`nextLine`](#43-nextline-t-))*, **`'`** *([`nextLineShowText`](#46-nextlineshowtext-))*, and **`"`** *([`nextLineSetSpacingShowText`](#47-nextlinesetspacingshowtext-))* operators. Initial value: `0`. 
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
