@@ -310,7 +310,7 @@ Source:
 Turns the path currently being built into the current clipping path. Uses the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule) for clipping.
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=138
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1850168
 *
 
 ### 30: eoClip (`W*`)
@@ -319,7 +319,7 @@ Source:
 Turns the path currently being built into the current clipping path. Uses the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) for clipping.
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=138
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1850168
 *
 
 ### 31: beginText (`BT`)
