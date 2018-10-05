@@ -366,21 +366,25 @@ End the path object without filling or stroking it. This operator shall be a pat
 *
 
 ### 29: clip (`W`)
-*no parameters*
+#### Operands
+*none*
 
-Turns the path currently being built into the current clipping path. Uses the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule) for clipping.
+#### PDF Specification
+Modify the current clipping path by intersecting it with the current path, using the [nonzero winding number rule](http://en.wikipedia.org/wiki/Nonzero-rule) to determine which regions lie inside the clipping path. 
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1850168
+#### Source
+* [PDF Specification / Table 61 – Clipping Path Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1850168)
 *
 
 ### 30: eoClip (`W*`)
-*no parameters*
+#### Operands
+*none*
 
-Turns the path currently being built into the current clipping path. Uses the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) for clipping.
+#### PDF Specification
+Modify the current clipping path by intersecting it with the current path, using the [even-odd rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) to determine which regions lie inside the clipping path.
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1850168
+#### Source
+* [PDF Specification / Table 61 – Clipping Path Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1850168)
 *
 
 ### 31: beginText (`BT`)
