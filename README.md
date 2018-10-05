@@ -1,5 +1,8 @@
 # Documentation for Mozilla's PDF.js library
 ## Operations
+### Preliminary mark
+The list of operations contains all operations as defined in the PDF Specification that are used in PDF.js, aside with the operations that are only defined by PDF.js. The first group of operations show the operator, operands and describtion as defined in the PDF Specification. In the second group I tried to describe the operations as good as possible.
+
 ### 1: dependency
 * `dependencies`: *`array`* - list of dependency object ids
 
