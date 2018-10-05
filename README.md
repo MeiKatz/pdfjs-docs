@@ -8,25 +8,38 @@
 
 sets line width
 
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2823](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2823)
+
 ### 3: setLineCap (`J`)
 * `style`: *`number`* - either `0` (butt), `1` (round), or `2` (square)
 sets line cap style; determines how the end points of every line are drawn;
 
-see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap
+Source:
+*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2824](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2824)
+* https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap
 
 ### 4: setLineJoin (`j`)
 * `style`: *`number`* - either `0` (miter), `1` (round), or `2` (bevel)
 
 sets line join style; determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together;
 
-see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin
+Source:
+*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2825](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2825)
+* https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin
 
 ### 5: setMiterLimit (`M`)
 * `limit`: *`number`*
 
 sets the miter limit ratio in space units
 
-see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit
+Source:
+* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2826](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2826)
+* https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit
 
 ### 6: setDash (`d`)
 * `dashArray`: *`array`* - An Array of numbers which specify distances to alternately draw a line and a gap (in coordinate space units). If the number of elements in the array is odd, the elements of the array get copied and concatenated;
