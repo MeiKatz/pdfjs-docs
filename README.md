@@ -624,25 +624,32 @@ string '
 
 ### 48: setCharWidth (`d0`)
 #### Operands
-* `xWidth`: *`number`*
-* `yWidth`: *`number`*
+* `wx`: *`number`*
+* `wy`: *`number`*
+
+#### PDF Specification
+Set width information for the glyph and declare that the glyph description specifies both its shape and its colour.
+
+`wx` denotes the horizontal displacement in the glyph coordinate system; it shall be consistent with the corresponding width in the font’s **Widths** array. `wy` shall be `0`.
+
+This operator shall only be permitted in a content stream appearing in a Type 3 font’s **CharProcs** dictionary. It is  typically used only if the glyph description executes operators to set the colour explicitly. 
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938
+* [PDF Specification / Table 113 –Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
 *
 
 ### 49: setCharWidthAndBounds (`d1`)
 #### Operands
-* `xWidth`: *`number`*
-* `yWidth`: *`number`*
+* `wx`: *`number`*
+* `wy`: *`number`*
 * `llx`: ?
 * `lly`: ?
 * `urx`: ?
 * `ury`: ?
 
 #### Source
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938
-*
+* [PDF Specification / Table 113 –Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
+* 
 
 ### 50: setStrokeColorSpace (`CS`)
 #### Operands
