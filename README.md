@@ -159,65 +159,65 @@ Source:
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2833](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2833)
 
 ### 13: moveTo (`m`)
-* ?
-* ?
+* `x`: *`number`*
+* `y`: *`number`*
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=132
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2836](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2836)
 
 ### 14: lineTo (`l`)
-* ?
-* ?
+* `x`: *`number`*
+* `y`: *`number`*
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=132
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2837](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2837)
 
 ### 15: curveTo (`c`)
-* ?
-* ?
-* ?
-* ?
-* ?
-* ?
+* `x1`: *`number`*
+* `y1`: *`number`*
+* `x2`: *`number`*
+* `y2`: *`number`*
+* `x3`: *`number`*
+* `y3`: *`number`*
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=132
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2838](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2838)
 
 ### 16: curveTo2 (`v`)
-* ?
-* ?
-* ?
-* ?
+* `x2`: *`number`*
+* `y2`: *`number`*
+* `x3`: *`number`*
+* `y3`: *`number`*
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2839](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2839)
 
 ### 17: curveTo3 (`y`)
-* ?
-* ?
-* ?
-* ?
+* `x1`: *`number`*
+* `y1`: *`number`*
+* `x3`: *`number`*
+* `y3`: *`number`*
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2840](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2840)
 
 ### 18: closePath (`h`)
 Causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start.
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2841](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2841)
 
 ### 19: rectangle (`re`)
-* `x`: `number`
-* `y`: `number`
-* `width`: `number`
-* `height`: `number`
+* `x`: *`number`*
+* `y`: *`number`*
+* `width`: *`number`*
+* `height`: *`number`*
 
 Source:
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
@@ -229,7 +229,7 @@ Source:
 Draws the shape by stroking its outline.
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2843](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2843)
 
 ### 21: closeStroke (`s`)
@@ -238,7 +238,7 @@ Source:
 Same as [`closePath`](#18-closepath) followed by a [`stroke`](#20-stroke).
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2844](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2844)
 
 ### 22: fill (`f` / `F`)
@@ -247,7 +247,7 @@ Source:
 Fills the current path with the current fill style (color and opacity) using the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule).
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2845-L2846](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2845-L2846)
 
 ### 23: eoFill (`f*`)
@@ -255,40 +255,72 @@ Source:
 
 Fills the current path with the current fill style (color and opacity) using the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
+* 
+
 ### 24: fillStroke (`B`)
 *no parameters*
 
 Same as [`fill`](#22-fill) and [`stroke`](#20-stroke) but in one operation.
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
+*
 
 ### 25: eoFillStroke (`B*`)
 *no parameters*
 
 Same as [`eoFill`](#23-eofill) and [`stroke`](#20-stroke) but in one operation.
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
+*
+
 ### 26: closeFillStroke (`b`)
 *no parameters*
 
 Same as [`closePath`](#18-closepath) followed by a [`fillStroke`](#24-fillstroke) but in one operation.
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
+* 
 
 ### 27: closeEOFillStroke (`b*`)
 *no parameters*
 
 Same as [`closePath`](#18-closepath) followed by a [`eoFillStroke`](#25-eofillstroke) but in one operation.
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
+* 
+
 ### 28: endPath (`n`)
 *no parameters*
 
 Finalize all current path operations and run pending actions.
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=135
+*
 
 ### 29: clip (`W`)
 *no parameters*
 
 Turns the path currently being built into the current clipping path. Uses the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule) for clipping.
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=138
+*
+
 ### 30: eoClip (`W*`)
 *no parameters*
 
 Turns the path currently being built into the current clipping path. Uses the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) for clipping.
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=138
+*
 
 ### 31: beginText (`BT`)
 *no parameters*
