@@ -388,19 +388,27 @@ Modify the current clipping path by intersecting it with the current path, using
 *
 
 ### 31: beginText (`BT`)
-*no parameters*
+#### Operands
+*none*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458
+#### PDF Specification
+Begin a text object, initializing the text matrix and the text line matrix to the identity matrix. Text objects shall not be nested; a second **`BT`** shall not appear before an **`ET`**. 
+
+#### Source
+* [PDF Specification / Table 107 – Text object operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458)
 * 
 
 Starts a new text block. Resets the text matrix, the pointer position (x and y), and the line position (x and y).
 
 ### 32: endText (`ET`)
-*no parameters*
+#### Operands
+*none*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458
+#### PDF Specification
+End a text object, discarding the text matrix.
+
+#### Source
+* [PDF Specification / Table 107 – Text object operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458)
 *
 
 Finalize all current text operations and run pending actions.
