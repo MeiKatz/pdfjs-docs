@@ -9,7 +9,7 @@
 sets line width
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2823](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2823)
 
 ### 3: setLineCap (`J`)
@@ -17,7 +17,7 @@ Source:
 sets line cap style; determines how the end points of every line are drawn;
 
 Source:
-*
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2824](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2824)
 * https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap
 
@@ -27,7 +27,7 @@ Source:
 sets line join style; determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together;
 
 Source:
-*
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2825](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2825)
 * https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin
 
@@ -37,7 +37,7 @@ Source:
 sets the miter limit ratio in space units
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2826](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2826)
 * https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit
 
@@ -52,7 +52,7 @@ Source:
 sets the line dash pattern used when stroking lines, using an array of values which specify alternating lengths of lines and gaps which describe the pattern
 
 Source:
-*
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2827](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2827)
 
 ### 7: setRenderingIntent (`ri`)
@@ -60,7 +60,7 @@ Source:
 * `intent`: ?
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2828](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2828)
 
 ### 8: setFlatness (`i`)
@@ -68,7 +68,7 @@ Source:
 * `flatness`: ?
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2829](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2829)
 
 ### 9: setGState (`gs`)
@@ -88,7 +88,7 @@ Source:
   * `SMask`.
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2830](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2830)
 
 ### 10: save (`q`)
@@ -134,7 +134,7 @@ Saves the following properties:
 * mask id (only svg)
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2831](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2831)
 
 ### 11: restore (`Q`)
@@ -143,7 +143,7 @@ Source:
 Restores the [previously saved values](#10-save).
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2832](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2832)
 
 ### 12: transform (`cm`)
@@ -155,7 +155,7 @@ Source:
 * `vertMoving`: *`number`*
 
 Source:
-* 
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2833](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2833)
 
 ### 13: moveTo (`m`)
@@ -625,25 +625,53 @@ Source:
 ### 67: markPoint (`MP`)
 * `tag`: ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+*
+
 ### 68: markPointProps (`DP`)
 * `tag`: ?
 * `properties`: ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+*
+
 ### 69: beginMarkedContent (`BMC`)
 * `tag`: ?
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+*
 
 ### 70: beginMarkedContentProps (`BDC`)
 * `tag`: ?
 * `properties`: ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+* 
+
 ### 71: endMarkedContent (`EMC`)
 *no parameters*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921
+* 
 
 ### 72: beginCompat (`BX`)
 *no parameters*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072
+*
+
 ### 73: endCompat (`EX`)
 *no parameters*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072
+* 
 
 ### 74: paintFormXObjectBegin
 * `matrix`: ?
