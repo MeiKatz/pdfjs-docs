@@ -325,42 +325,86 @@ Source:
 ### 31: beginText (`BT`)
 *no parameters*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458
+* 
+
 Starts a new text block. Resets the text matrix, the pointer position (x and y), and the line position (x and y).
 
 ### 32: endText (`ET`)
 *no parameters*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458
+*
 
 Finalize all current text operations and run pending actions.
 
 ### 33: setCharSpacing (`Tc`)
 * `spacing`: *`number`*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+*
+
 ### 34: setWordSpacing (`Tw`)
 * `spacing`: *`number`*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+*
 
 ### 35: setHScale (`Tz`)
 * `scale`: *`number`*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+*
+
 ### 36: setLeading (`TL`)
 * `leading`: *`number`*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+* 
 
 ### 37: setFont (`Tf`)
 * `fontRefName`: *`string`*
 * `size`: *`number`*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+*
+
 ### 38: setTextRenderingMode (`Tr`)
 * `mode`: ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+*
+
 ### 39: setTextRise (`Ts`)
 * `rise`: ?
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+*
 
 ### 40: moveText (`Td`)
 * `x`: *`number`*
 * `y`: *`number`*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
+* 
+
 ### 41: setLeadingMoveText (`TD`)
 * `x`: *`number`*
 * `y`: *`number`*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
+*
 
 ### 42: setTextMatrix (`Tm`)
 * `horizScaling`: *`number`*
@@ -370,26 +414,54 @@ Finalize all current text operations and run pending actions.
 * `horizMoving`: *`number`*
 * `vertMoving`: *`number`*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
+*
+
 ### 43: nextLine (`T*`)
 *no parameters*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331
+*
 
 ### 44: showText (`Tj`)
 * `glyphs`: *`array`*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300
+* 
+
 ### 45: showSpacedText (`TJ`)
 * ?
 
-### 46: nextLineShowText (`\'`)
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300
+* 
+
+### 46: nextLineShowText (`'`)
 * ?
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300
+*
 
 ### 47: nextLineSetSpacingShowText (`"`)
 * ?
 * ?
 * ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300
+*
+
 ### 48: setCharWidth (`d0`)
 * `xWidth`: *`number`*
 * `yWidth`: *`number`*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938
+*
 
 ### 49: setCharWidthAndBounds (`d1`)
 * `xWidth`: *`number`*
@@ -398,6 +470,10 @@ Finalize all current text operations and run pending actions.
 * `lly`: ?
 * `urx`: ?
 * `ury`: ?
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938
+*
 
 ### 50: setStrokeColorSpace (`CS`)
 * `name`: *`string`*
@@ -521,14 +597,30 @@ Source:
 ### 63: beginInlineImage (`BI`)
 *no parameters*
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
+* 
+
 ### 64: beginImageData (`ID`)
 *no parameters*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
+*
 
 ### 65: endInlineImage (`EI`)
 * ?
 
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
+*
+
 ### 66: paintXObject (`Do`)
 * ?
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987702
+*
 
 ### 67: markPoint (`MP`)
 * `tag`: ?
