@@ -582,6 +582,9 @@ Show a text string.
 #### Operands
 * `array`: ?
 
+#### PDF Specification
+Show one or more text strings, allowing individual glyph positioning. Each element of `array` shall be either a string or a number. If the element is a string, this operator shall show the string. If it is a number, the operator shall adjust the text position by that amount; that is, it shall translate the text matrix, **Tm**. The number shall be expressed in thousandths of a unit of text space. This amount shall be subtracted from the current horizontal or vertical coordinate, depending on the writing mode. In the default coordinate system, a positive adjustment has the  effect of moving the next glyph painted either to the left or down by the given amount.
+
 #### Source
 * [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
 * 
@@ -590,15 +593,30 @@ Show a text string.
 #### Operands
 * `string`: *`string`*
 
+#### PDF Specification
+Move to the next line and show a text string. This operator shall have the same effect as the code
+```
+T*
+string Tj
+```
+
 #### Source
 * [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
 *
 
 ### 47: nextLineSetSpacingShowText (`"`)
 #### Operands
-* `aw`: ?
-* `ac`: ?
+* `aw`: *`number`*
+* `ac`: *`number`*
 * `string`: *`string`*
+
+#### PDF Specification
+Move to the next line and show a text string, using `aw` as the word spacing and `ac` as the character spacing (setting the corresponding parameters in the text state). `aw` and `ac` shall be numbers expressed in unscaled text space units. This operator shall have the same effect as this code:
+```
+aw Tw
+ac Tc
+string '
+```
 
 #### Source
 * [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
