@@ -674,30 +674,46 @@ Source:
 *
 
 ### 63: beginInlineImage (`BI`)
-*no parameters*
+#### Operands
+*none*
 
-Source:
+#### PDF Specification
+Begin an inline image object.
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
 * 
 
 ### 64: beginImageData (`ID`)
-*no parameters*
+#### Operands
+*none*
 
-Source:
+#### PDF Specification
+Begin the image data for an inline image object.
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
 *
 
 ### 65: endInlineImage (`EI`)
-* ?
+#### Operands
+*none*
 
-Source:
+#### PDF Specification
+End an inline image object.
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045
 *
 
 ### 66: paintXObject (`Do`)
-* ?
+#### Operands
+* `name`: ?
 
-Source:
+#### PDF Specification
+Paint the specified XObject. The operand `name` shall appear as a key in the **XObject** subdictionary of the current resource dictionary. The associated value shall be a stream whose **Type** entry, if present, is **XObject**. The effect of **`Do`** depends on the value of the XObject’s Subtype entry, which may be Image, Form, or **`PS`**. 
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987702
 *
 
