@@ -3,32 +3,32 @@
 ### 1: dependency
 * `dependencies`: *`array`* - list of dependency object ids
 
-### 2: setLineWidth
+### 2: setLineWidth (`w`)
 * `width`: *`number`*
 
 sets line width
 
-### 3: setLineCap
+### 3: setLineCap (`J`)
 * `style`: *`number`* - either `0` (butt), `1` (round), or `2` (square)
 sets line cap style; determines how the end points of every line are drawn;
 
 see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap
 
-### 4: setLineJoin
+### 4: setLineJoin (`j`)
 * `style`: *`number`* - either `0` (miter), `1` (round), or `2` (bevel)
 
 sets line join style; determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together;
 
 see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin
 
-### 5: setMiterLimit
+### 5: setMiterLimit (`M`)
 * `limit`: *`number`*
 
 sets the miter limit ratio in space units
 
 see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/miterLimit
 
-### 6: setDash
+### 6: setDash (`d`)
 * `dashArray`: *`array`* - An Array of numbers which specify distances to alternately draw a line and a gap (in coordinate space units). If the number of elements in the array is odd, the elements of the array get copied and concatenated;
 
   see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
@@ -38,19 +38,19 @@ see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContex
 
 sets the line dash pattern used when stroking lines, using an array of values which specify alternating lengths of lines and gaps which describe the pattern
 
-### 7: setRenderingIntent
+### 7: setRenderingIntent (`ri`)
 // todo
 * `intent`: ?
 
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L888
 
-### 8: setFlatness
+### 8: setFlatness (`i`)
 // todo
 * `flatness`: ?
 
 unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a135f201508264761fce17c08059/src/display/canvas.js#L893
 
-### 9: setGState
+### 9: setGState (`gs`)
 * `states`: *`array`* - An array of key-value pairs where the first element of the pair is the key and the second element is the value.
   Keys may be any of the following:
   * `LW` ([setLineWidth](#2-setlinewidth))
@@ -66,7 +66,7 @@ unsure what it does. see: https://github.com/mozilla/pdf.js/blob/66ffdc4c5b63a13
   * `BM` (global composite operation)
   * `SMask`.
 
-### 10: save
+### 10: save (`q`)
 *no parameters*
 
 Saves the following properties:
@@ -109,12 +109,12 @@ Saves the following properties:
 * mask id (only svg)
 
 
-### 11: restore
+### 11: restore (`Q`)
 *no parameters*
 
 Restores the [previously saved values](#10-save).
 
-### 12: transform
+### 12: transform (`cm`)
 * `horizScaling`: *`number`*
 * `horizSkewing`: *`number`*
 * `vertSkewing`: *`number`*
@@ -122,117 +122,139 @@ Restores the [previously saved values](#10-save).
 * `horizMoving`: *`number`*
 * `vertMoving`: *`number`*
 
-### 13: moveTo //
+### 13: moveTo (`m`)
 
-### 14: lineTo //
+### 14: lineTo (`l`)
 
-### 15: curveTo(/* ??? */) //
+### 15: curveTo (`c`)
+* ?
+* ?
+* ?
+* ?
+* ?
+* ?
 
-### 16: curveTo2(/* ??? */) //
+### 16: curveTo2 (`v`)
+* ?
+* ?
+* ?
+* ?
 
-### 17: curveTo3(/* ??? */) //
+### 17: curveTo3 (`y`)
+* ?
+* ?
+* ?
+* ?
 
-### 18: closePath
+### 18: closePath (`h`)
 Causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start.
 
-### 19: rectangle(/* ??? */) //
+### 19: rectangle (`re`)
+* `x`: `number`
+* `y`: `number`
+* `width`: `number`
+* `height`: `number`
 
-### 20: stroke
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
+* https://github.com/mozilla/pdf.js/blob/master/src/core/evaluator.js#L2842
+
+### 20: stroke (`S`)
 *no parameters*
 
 Draws the shape by stroking its outline.
 
-### 21: closeStroke
+### 21: closeStroke (`s`)
 *no parameters*
 
 Same as [`closePath`](#18-closepath) followed by a [`stroke`](#20-stroke).
 
-### 22: fill
+### 22: fill (`f` / `F`)
 *no parameters*
 
 Fills the current path with the current fill style (color and opacity) using the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule).
 
-### 23: eoFill
+### 23: eoFill (`f*`)
 *no parameters*
 
 Fills the current path with the current fill style (color and opacity) using the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
-### 24: fillStroke
+### 24: fillStroke (`B`)
 *no parameters*
 
 Same as [`fill`](#22-fill) and [`stroke`](#20-stroke) but in one operation.
 
-### 25: eoFillStroke
+### 25: eoFillStroke (`B*`)
 *no parameters*
 
 Same as [`eoFill`](#23-eofill) and [`stroke`](#20-stroke) but in one operation.
 
-### 26: closeFillStroke
+### 26: closeFillStroke (`b`)
 *no parameters*
 
 Same as [`closePath`](#18-closepath) followed by a [`fillStroke`](#24-fillstroke) but in one operation.
 
-### 27: closeEOFillStroke
+### 27: closeEOFillStroke (`b*`)
 *no parameters*
 
 Same as [`closePath`](#18-closepath) followed by a [`eoFillStroke`](#25-eofillstroke) but in one operation.
 
-### 28: endPath
+### 28: endPath (`n`)
 *no parameters*
 
 Finalize all current path operations and run pending actions.
 
-### 29: clip
+### 29: clip (`W`)
 *no parameters*
 
 Turns the path currently being built into the current clipping path. Uses the [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule) for clipping.
 
-### 30: eoClip
+### 30: eoClip (`W*`)
 *no parameters*
 
 Turns the path currently being built into the current clipping path. Uses the [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) for clipping.
 
-### 31: beginText
+### 31: beginText (`BT`)
 *no parameters*
 
 Starts a new text block. Resets the text matrix, the pointer position (x and y), and the line position (x and y).
 
-### 32: endText
+### 32: endText (`ET`)
 *no parameters*
 
 Finalize all current text operations and run pending actions.
 
-### 33: setCharSpacing
+### 33: setCharSpacing (`Tc`)
 * `spacing`: *`number`*
 
-### 34: setWordSpacing
+### 34: setWordSpacing (`Tw`)
 * `spacing`: *`number`*
 
-### 35: setHScale
+### 35: setHScale (`Tz`)
 * `scale`: *`number`*
 
-### 36: setLeading
+### 36: setLeading (`TL`)
 * `leading`: *`number`*
 
-### 37: setFont
+### 37: setFont (`Tf`)
 * `fontRefName`: *`string`*
 * `size`: *`number`*
 
-### 38: setTextRenderingMode
+### 38: setTextRenderingMode (`Tr`)
 * `mode`: ?
 
-### 39: setTextRise
+### 39: setTextRise (`Ts`)
 * `rise`: ?
 
-### 40: moveText
+### 40: moveText (`Td`)
 * `x`: *`number`*
 * `y`: *`number`*
 
-### 41: setLeadingMoveText
+### 41: setLeadingMoveText (`TD`)
 * `x`: *`number`*
 * `y`: *`number`*
 
-### 42: setTextMatrix
+### 42: setTextMatrix (`Tm`)
 * `horizScaling`: *`number`*
 * `horizSkewing`: *`number`*
 * `vertSkewing`: *`number`*
@@ -240,23 +262,28 @@ Finalize all current text operations and run pending actions.
 * `horizMoving`: *`number`*
 * `vertMoving`: *`number`*
 
-### 43: nextLine
+### 43: nextLine (`T*`)
 *no parameters*
 
-### 44: showText
+### 44: showText (`Tj`)
 * `glyphs`: *`array`*
 
-### 45: showSpacedText: 45, // ??
+### 45: showSpacedText (`TJ`)
+* ?
 
-### 46: nextLineShowText: 46, // ??
+### 46: nextLineShowText (`\'`)
+* ?
 
-### 47: nextLineSetSpacingShowText: 47, // ??
+### 47: nextLineSetSpacingShowText (`"`)
+* ?
+* ?
+* ?
 
-### 48: setCharWidth
+### 48: setCharWidth (`d0`)
 * `xWidth`: *`number`*
 * `yWidth`: *`number`*
 
-### 49: setCharWidthAndBounds
+### 49: setCharWidthAndBounds (`d1`)
 * `xWidth`: *`number`*
 * `yWidth`: *`number`*
 * `llx`: ?
@@ -264,23 +291,37 @@ Finalize all current text operations and run pending actions.
 * `urx`: ?
 * `ury`: ?
 
-### 50: setStrokeColorSpace: 50, // ??
+### 50: setStrokeColorSpace (`CS`)
+* ?
 
-### 51: setFillColorSpace: 51, // ??
+### 51: setFillColorSpace (`cs`)
+* ?
 
-### 52: setStrokeColor: 52, // ??
+### 52: setStrokeColor (`SC`)
+* ?
+* ?
+* ?
+* ? // variable
 
-### 53: setStrokeColorN
+### 53: setStrokeColorN (`SCN`)
+* ? (33) / variable
 *no parameters*
 
-### 54: setFillColor: 54, // ??
+### 54: setFillColor
+* ?
+* ?
+* ?
+* ? // variable
 
 ### 55: setFillColorN
+* ? (33) // variable
 *no parameters*
 
-### 56: setStrokeGray: 56, // ??
+### 56: setStrokeGray
+* ?
 
-### 57: setFillGray: 57, // ??
+### 57: setFillGray
+* ?
 
 ### 58: setStrokeRGBColor
 * `r`: *`number`* - value between 0 and 255
@@ -293,22 +334,31 @@ Finalize all current text operations and run pending actions.
 * `b`: *`number`* - value between 0 and 255
 
 ### 60: setStrokeCMYKColor
-currently unused
+* ?
+* ?
+* ?
+* ?
 
 ### 61: setFillCMYKColor
-currently unused
+* ?
+* ?
+* ?
+* ?
 
 ### 62: shadingFill
 * `patternIR`: ?
 
-### 63: beginInlineImage() {} // unreachable
+### 63: beginInlineImage
+*no parameters*
 
-### 64: beginImageData() {} // unreachable
+### 64: beginImageData
+*no parameters*
 
 ### 65: endInlineImage
-currenty unused
+* ?
 
-### 66: paintXObject() {} // unsupported
+### 66: paintXObject
+* ?
 
 ### 67: markPoint // todo
 * `tag`: ?
