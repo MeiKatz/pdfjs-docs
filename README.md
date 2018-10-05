@@ -3,6 +3,57 @@
 ### Preliminary mark
 The list of operations contains all operations as defined in the PDF Specification that are used in PDF.js, aside with the operations that are only defined by PDF.js. The first group of operations show the operator, operands and describtion as defined in the PDF Specification. In the second group I tried to describe the operations as good as possible.
 
+### Overview
+#### General graphics state
+* [`setLineWidth`](#2-setlinewidth-w)
+* [`setLineCap`](#3-setlinecap-j)
+* [`setLineJoin`](#4-setlinejoin-j)
+* [`setMiterLimit`](#5-setmiterlimit-m)
+* [`setDash`](#6-setdash-d)
+* [`setRenderingIntent`](#7-setrenderingintent-ri)
+* [`setFlatness`](#8-setflatness-i)
+* [`setGState`](#9-setgstate-gs)
+
+#### Special graphics state
+* [`save`](#10-save-q)
+* [`restore`](#11-restore-q)
+* [`transform`](#12-transform-cm)
+
+#### Path construction
+* [`moveTo`](#13-moveto-m)
+* [`lineTo`](#14-lineto-l)
+* [`curveTo`](#15-curveto-c)
+* [`curveTo2`](#16-curveto2-v)
+* [`curveTo3`](#17-curveto3-y)
+* [`closePath`](#18-closepath-h)
+* [`rectangle`](#19-rectangle-re)
+
+#### Path painting
+
+#### Clipping paths
+
+#### Text objects
+
+#### Text state
+
+#### Text positioning
+
+#### Text showing
+
+#### Type 3 fonts
+
+#### Color
+
+#### Shading patterns
+
+#### Inline images
+
+#### XObjects
+
+#### Marked content
+
+#### Compatibility
+
 ### 1: dependency
 * `dependencies`: *`array`* - list of dependency object ids
 
@@ -65,7 +116,6 @@ sets the line dash pattern used when stroking lines, using an array of values wh
 
 ### 7: setRenderingIntent (`ri`)
 #### Operands
-// todo
 * `intent`: ?
 
 #### Source
