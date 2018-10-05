@@ -400,16 +400,37 @@ Finalize all current text operations and run pending actions.
 * `ury`: ?
 
 ### 50: setStrokeColorSpace (`CS`)
-* ?
+* `name`: *`string`*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
 
 ### 51: setFillColorSpace (`cs`)
-* ?
+* `name`: *`string`*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
 
 ### 52: setStrokeColor (`SC`)
-* ?
-* ?
-* ?
-* ? // variable
+For gray color spaces (DeviceGray, CalGray or Indexed):
+* `scale`: *`number`*
+
+For RGB color spaces (DeviceRGB, CalRGB or Lab):
+* `r`: *`number`*
+* `g`: *`number`*
+* `b`: *`number`*
+
+For CMYK color spaces (DeviceCMYK):
+* `c`: *`number`*
+* `m`: *`number`*
+* `y`: *`number`*
+* `k`: *`number`*
+
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+* 
 
 ### 53: setStrokeColorN (`SCN`)
 * ? (33) / variable
