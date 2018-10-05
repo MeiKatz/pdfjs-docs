@@ -398,8 +398,6 @@ Begin a text object, initializing the text matrix and the text line matrix to th
 * [PDF Specification / Table 107 – Text object operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458)
 * 
 
-Starts a new text block. Resets the text matrix, the pointer position (x and y), and the line position (x and y).
-
 ### 32: endText (`ET`)
 #### Operands
 *none*
@@ -411,56 +409,64 @@ End a text object, discarding the text matrix.
 * [PDF Specification / Table 107 – Text object operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458)
 *
 
-Finalize all current text operations and run pending actions.
-
 ### 33: setCharSpacing (`Tc`)
-* `spacing`: *`number`*
+#### Operands
+* `charSpace`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+#### PDF Specification
+Set the character spacing to `charSpace`, which shall be a number expressed in unscaled text space units. Character spacing shall be used by the `Tj`, `TJ`, and `'` operators. Initial value: `0`. 
+
+#### Source
+* [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 *
 
 ### 34: setWordSpacing (`Tw`)
-* `spacing`: *`number`*
+#### Operands
+* `wordSpace`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+#### Source
+* [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 *
 
 ### 35: setHScale (`Tz`)
+#### Operands
 * `scale`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+#### Source
+* [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 *
 
 ### 36: setLeading (`TL`)
+#### Operands
 * `leading`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+#### Source
+* [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 * 
 
 ### 37: setFont (`Tf`)
-* `fontRefName`: *`string`*
+#### Operands
+* `font`: *`string`*
 * `size`: *`number`*
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+#### Source
+* [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 *
 
 ### 38: setTextRenderingMode (`Tr`)
-* `mode`: ?
+#### Operands
+* `render`: ?
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+#### Source
+* [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 *
 
 ### 39: setTextRise (`Ts`)
+#### Operands
 * `rise`: ?
 
-Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454
+#### Source
+* [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
 *
 
 ### 40: moveText (`Td`)
