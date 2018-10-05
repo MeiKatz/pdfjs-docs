@@ -438,74 +438,78 @@ or
 * `c1` ... `cn` (`n` <= 32)
 * `name`
 
-### 54: setFillColor
+Source:
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574
+*
+
+### 54: setFillColor (`sc`)
 * ?
 * ?
 * ?
 * ? // variable
 
-### 55: setFillColorN
+### 55: setFillColorN (`scn`)
 * ? (33) // variable
 *no parameters*
 
-### 56: setStrokeGray
+### 56: setStrokeGray (`G`)
 * ?
 
-### 57: setFillGray
+### 57: setFillGray (`g`)
 * ?
 
-### 58: setStrokeRGBColor
+### 58: setStrokeRGBColor (`RG`)
 * `r`: *`number`* - value between 0 and 255
 * `g`: *`number`* - value between 0 and 255
 * `b`: *`number`* - value between 0 and 255
 
-### 59: setFillRGBColor
+### 59: setFillRGBColor (`rg`)
 * `r`: *`number`* - value between 0 and 255
 * `g`: *`number`* - value between 0 and 255
 * `b`: *`number`* - value between 0 and 255
 
-### 60: setStrokeCMYKColor
+### 60: setStrokeCMYKColor (`K`)
 * ?
 * ?
 * ?
 * ?
 
-### 61: setFillCMYKColor
+### 61: setFillCMYKColor (`k`)
 * ?
 * ?
 * ?
 * ?
 
-### 62: shadingFill
+### 62: shadingFill (`sh`)
 * `patternIR`: ?
 
-### 63: beginInlineImage
+### 63: beginInlineImage (`BI`)
 *no parameters*
 
-### 64: beginImageData
+### 64: beginImageData (`ID`)
 *no parameters*
 
-### 65: endInlineImage
+### 65: endInlineImage (`EI`)
 * ?
 
-### 66: paintXObject
+### 66: paintXObject (`Do`)
 * ?
 
-### 67: markPoint // todo
+### 67: markPoint (`MP`)
 * `tag`: ?
 
-### 68: markPointProps // todo
+### 68: markPointProps (`DP`)
 * `tag`: ?
 * `properties`: ?
 
-### 69: beginMarkedContent // todo
+### 69: beginMarkedContent (`BMC`)
 * `tag`: ?
 
-### 70: beginMarkedContentProps // todo
+### 70: beginMarkedContentProps (`BDC`)
 * `tag`: ?
 * `properties`: ?
 
-### 71: endMarkedContent // todo
+### 71: endMarkedContent (`EMC`)
 *no parameters*
 
 ### 72: beginCompat // compatibility
