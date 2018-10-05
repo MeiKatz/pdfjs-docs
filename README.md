@@ -162,7 +162,10 @@ Source:
 * `x`: *`number`*
 * `y`: *`number`*
 
-Source:
+#### PDF Specification
+> Begin a new subpath by moving the current point to coordinates (*x, y*), omitting any connecting line segment. If the previous path construction operator in the current path was also **m**, the new **m** overrides it; no vestige of the previous **m** operation remains in the path.
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2836](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2836)
 
@@ -170,7 +173,10 @@ Source:
 * `x`: *`number`*
 * `y`: *`number`*
 
-Source:
+#### PDF Specification
+> Append a straight line segment from the current point to the point (*x, y*). The new current point shall be (*x, y*). 
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2837](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2837)
 
@@ -182,7 +188,10 @@ Source:
 * `x3`: *`number`*
 * `y3`: *`number`*
 
-Source:
+#### PDF Specification
+> Append a cubic Bézier curve to the current path. The curve shall extend from the current point to the point (*x<sub>3</sub>, y<sub>3</sub>*), using (*x<sub>1</sub>, y<sub>1</sub>*) and (*x<sub>2</sub>, y<sub>2</sub>*) as the Bézier control points. The new current point shall be (*x<sub>3</sub>, y<sub>3</sub>*). 
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2838](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2838)
 
