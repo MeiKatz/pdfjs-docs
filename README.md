@@ -414,7 +414,7 @@ End a text object, discarding the text matrix.
 * `charSpace`: *`number`*
 
 #### PDF Specification
-Set the character spacing to `charSpace`, which shall be a number expressed in unscaled text space units. Character spacing shall be used by the **`Tj`** ([*`showText`*](#44-showText-tj)), **`TJ`** ([*`showSpacedText`*](#45-showspacedtext-tj), and **`'`** ([*`nextLineShowText`*](#46-nextlineshowtext-)) operators. Initial value: `0`. 
+Set the character spacing to `charSpace`, which shall be a number expressed in unscaled text space units. Character spacing shall be used by the **`Tj`** *([`showText`](#44-showText-tj))*, **`TJ`** *([`showSpacedText`](#45-showspacedtext-tj))*, and **`'`** *([`nextLineShowText`](#46-nextlineshowtext-))* operators. Initial value: `0`. 
 
 #### Source
 * [PDF Specification / Table 105 – Text state operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958454)
