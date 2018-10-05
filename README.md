@@ -163,7 +163,7 @@ Source:
 * `y`: *`number`*
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=132
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2836](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2836)
 
 ### 14: lineTo (`l`)
@@ -171,7 +171,7 @@ Source:
 * `y`: *`number`*
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=132
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2837](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2837)
 
 ### 15: curveTo (`c`)
@@ -183,7 +183,7 @@ Source:
 * `y3`: *`number`*
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=132
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2838](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2838)
 
 ### 16: curveTo2 (`v`)
@@ -193,7 +193,7 @@ Source:
 * `y3`: *`number`*
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2839](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2839)
 
 ### 17: curveTo3 (`y`)
@@ -203,14 +203,14 @@ Source:
 * `y3`: *`number`*
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2840](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2840)
 
 ### 18: closePath (`h`)
 Causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start.
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2841](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2841)
 
 ### 19: rectangle (`re`)
@@ -220,8 +220,8 @@ Source:
 * `height`: *`number`*
 
 Source:
-* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#page=133
-* h[https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2842](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2842)
+* https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2842](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2842)
 
 ### 20: stroke (`S`)
 *no parameters*
