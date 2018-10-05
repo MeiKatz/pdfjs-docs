@@ -29,30 +29,106 @@ The list of operations contains all operations as defined in the PDF Specificati
 * [`rectangle`](#19-rectangle-re)
 
 #### Path painting
+* S
+* s
+* f
+* F
+* f*
+* B
+* B*
+* b
+* b*
+* n
 
 #### Clipping paths
+* W
+* W*
 
 #### Text objects
+* BT
+* ET
 
 #### Text state
+* Tc
+* Tw
+* Tz
+* TL
+* Tf
+* Tr
+* Ts
 
 #### Text positioning
+* Td
+* TD
+* Tm
+* T*
 
 #### Text showing
+* Tj
+* TJ
+* '
+* "
 
 #### Type 3 fonts
+* d0
+* d1
 
 #### Color
+* CS
+* cs
+* SC
+* SCN
+* sc
+* scn
+* G
+* g
+* RG
+* rg
+* K
+* k
 
 #### Shading patterns
+* sh
 
 #### Inline images
+* BI
+* ID
+* EI
 
 #### XObjects
+* Do
 
 #### Marked content
+* MP
+* DP
+* BMC
+* BDC
+* EMC
 
 #### Compatibility
+* BX
+* EX
+
+#### PDF.js only
+* [`dependency`](#1-dependency)
+* [`paintFormXObjectBegin`](#74-paintformxobjectbegin)
+* [`paintFormXObjectEnd`](#75-paintformxobjectend)
+* [`beginGroup`](#76-begingroup)
+* [`endGroup`](#77-endgroup)
+* [`beginAnnotations`](#78-beginannotations)
+* [`endAnnotations`](#79-endannotations)
+* [`beginAnnotation`](#80-beginannotation)
+* [`endAnnotation`](#81-endannotation)
+* [`paintJpegXObject`](#82-paintjpegxobject)
+* [`paintImageMaskXObject`](#83-paintimagemaskxobject)
+* [`paintImageMaskXObjectGroup`](#84-paintimagemaskxobjectgroup)
+* [`paintImageXObject`](#85-paintimagexobject)
+* [`paintInlineImageXObject`](#86-paintinlineimagexobject)
+* [`paintInlineImageXObjectGroup`](#87-paintinlineimagexobjectgroup)
+* [`paintImageXObjectRepeat`](#88-paintimagexobjectrepeat)
+* [`paintImageMaskXObjectRepeat`](#89-paintimagemaskxobjectrepeat)
+* [`paintSolidColorImageMask`](#90-paintsolidcolorimagemask)
+* [`constructPath`](#91-constructpath)
 
 ### 1: dependency
 * `dependencies`: *`array`* - list of dependency object ids
