@@ -433,8 +433,10 @@ Source:
 * 
 
 ### 53: setStrokeColorN (`SCN`)
-* ? (33) / variable
-*no parameters*
+* `c1` ... `cn` (`n` <= 32)
+or
+* `c1` ... `cn` (`n` <= 32)
+* `name`
 
 ### 54: setFillColor
 * ?
