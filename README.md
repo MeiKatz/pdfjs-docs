@@ -163,7 +163,7 @@ Source:
 * `y`: *`number`*
 
 #### PDF Specification
-> Begin a new subpath by moving the current point to coordinates (*x, y*), omitting any connecting line segment. If the previous path construction operator in the current path was also **m**, the new **m** overrides it; no vestige of the previous **m** operation remains in the path.
+Begin a new subpath by moving the current point to coordinates (`x`, `y`), omitting any connecting line segment. If the previous path construction operator in the current path was also **`m`**, the new **`m`** overrides it; no vestige of the previous **`m`** operation remains in the path.
 
 #### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
@@ -174,7 +174,7 @@ Source:
 * `y`: *`number`*
 
 #### PDF Specification
-> Append a straight line segment from the current point to the point (*x, y*). The new current point shall be (*x, y*). 
+Append a straight line segment from the current point to the point (`x`, `y`). The new current point shall be (`x`, `y`). 
 
 #### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
@@ -189,7 +189,7 @@ Source:
 * `y3`: *`number`*
 
 #### PDF Specification
-> Append a cubic Bézier curve to the current path. The curve shall extend from the current point to the point (*x<sub>3</sub>, y<sub>3</sub>*), using (*x<sub>1</sub>, y<sub>1</sub>*) and (*x<sub>2</sub>, y<sub>2</sub>*) as the Bézier control points. The new current point shall be (*x<sub>3</sub>, y<sub>3</sub>*). 
+Append a cubic Bézier curve to the current path. The curve shall extend from the current point to the point (`x3`, `y3`), using (`x1`, `y1`) and (`x2`, `y2`) as the Bézier control points. The new current point shall be (`x3`, `y3`). 
 
 #### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
@@ -201,7 +201,10 @@ Source:
 * `x3`: *`number`*
 * `y3`: *`number`*
 
-Source:
+#### PDF Specification
+Append a cubic Bézier curve to the current path. The curve shall extend from the current point to the point (`x3`, `y3`), using the current point and (`x2`, `y2`) as the Bézier control points. The new current point shall be (`x3`, `y3`). 
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2839](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2839)
 
@@ -211,14 +214,23 @@ Source:
 * `x3`: *`number`*
 * `y3`: *`number`*
 
-Source:
+#### PDF Specification
+Append a cubic Bézier curve to the current path. The curve shall extend from the current point to the point (`x3`, `y3`), using (`x1`, `y1`) and (`x3`, `y3`) as the Bézier control points. The new current point shall be (`x3`, `y3`). 
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2840](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2840)
 
 ### 18: closePath (`h`)
 Causes the point of the pen to move back to the start of the current sub-path. It tries to add a straight line (but does not actually draw it) from the current point to the start.
 
-Source:
+#### PDF Specification
+Close the current subpath by appending a straight line segment from the current point to the starting point of the  
+subpath. If the current subpath is already closed, **`h`** shall do nothing. 
+
+This operator terminates the current subpath. Appending another segment to the current path shall begin a new subpath, even if the new segment begins at the endpoint reached by the **`h`** operation. 
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2841](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2841)
 
@@ -228,7 +240,22 @@ Source:
 * `width`: *`number`*
 * `height`: *`number`*
 
-Source:
+#### PDF Specification
+Append a rectangle to the current path as a complete subpath, with lower-left corner (`x`, `y`) and dimensions `width` and `height` in user space. The operation
+
+```
+x y width height re
+```
+is equivalent to
+```
+x y m
+(x + width) y l
+(x + width) (y + height) l
+x (y + height) l
+h
+```
+
+#### Source
 * https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987642
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2842](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2842)
 
