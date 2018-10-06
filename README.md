@@ -1030,52 +1030,112 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 * 
 
 ### 74: paintFormXObjectBegin
+#### Operands
 * `matrix`: ?
 * `bbox`: ?
 
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L331
+
 ### 75: paintFormXObjectEnd
-*no parameters*
+#### Operands
+*none*
+
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L340
 
 ### 76: beginGroup
-* `group`: ?
+#### Operands
+* `groupOptions`: `object`
+  * `matrix`: ?
+  * `bbox`: ?
+  * `smask`: ?
+  * `isolated`: `boolean` (default value: `false`)
+  * `knockout`: `boolean` (default value: `false`)
+
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L328
 
 ### 77: endGroup
-* `group`: ?
+#### Operands
+* `groupOptions`: `object`
+  * `matrix`: ?
+  * `bbox`: ?
+  * `smask`: ?
+  * `isolated`: `boolean` (default value: `false`)
+  * `knockout`: `boolean` (default value: `false`)
+
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L343
 
 ### 78: beginAnnotations
-*no parameters*
+#### Operands
+*none*
+
+Documentation?
 
 ### 79: endAnnotations
-*no parameters*
+#### Operands
+*none*
+
+Documentation?
 
 ### 80: beginAnnotation
+#### Operands
 * `rect`: ?
 * `transform`: ?
 * `matrix`: ?
 
+Documentation?
+
 ### 81: endAnnotation
-*no parameters*
+#### Operands
+*none*
+
+Documentation?
 
 ### 82: paintJpegXObject
 * `objId`: ?
 * `w`: ?
 * `h`: ?
 
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L441
+
 ### 83: paintImageMaskXObject
-* `img`: ?
+#### Operands
+* `imgData`: ?
+
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L390
 
 ### 84: paintImageMaskXObjectGroup
+#### Operands
 * `images`: ?
 
+Documentation?
+
 ### 85: paintImageXObject
+#### Operands
 * `objId`: ?
+* `w`: ?
+* `h`: ?
+
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L499
 
 ### 86: paintInlineImageXObject
+#### Operands
 * `imgData`: ?
+
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L417
 
 ### 87: paintInlineImageXObjectGroup
 * `imgData`: ?
 * `map`: ?
+
+Documentation?
 
 ### 88: paintImageXObjectRepeat
 * `objId`: ?
@@ -1083,15 +1143,25 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 * `scaleY`: ?
 * `positions`: ?
 
+Documentation?
+
 ### 89: paintImageMaskXObjectRepeat
 * `imgData`: ?
 * `scaleX`: ?
 * `scaleY`: ?
 * `positions`: ?
 
+Documentation?
+
 ### 90: paintSolidColorImageMask
 *no parameters*
 
+Documentation?
+
 ### 91: constructPath
+#### Operands
 * `ops`: ?
 * `args`: ?
+
+#### Source
+* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L881
