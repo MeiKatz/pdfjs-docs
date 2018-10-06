@@ -1,4 +1,4 @@
-# Documentation for Mozilla's PDF.js library
+# Documentation of the core of Mozilla's PDF.js library
 ## Operations
 ### Preliminary mark
 The list of operations contains all operations as defined in the PDF Specification that are used in PDF.js, aside with the operations that are only defined by PDF.js. The first group of operations show the operator, operands and describtion as defined in the PDF Specification. In the second group I tried to describe the operations as good as possible.
@@ -134,9 +134,10 @@ The list of operations contains all operations as defined in the PDF Specificati
 
 ### 2: setLineWidth (`w`)
 #### Operands
-* `width`: *`number`*
+* `lineWidth`: *`number`*
 
-sets line width
+#### PDF Specification
+Set the line width in the graphics state.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
@@ -144,8 +145,10 @@ sets line width
 
 ### 3: setLineCap (`J`)
 #### Operands
-* `style`: *`number`* - either `0` (butt), `1` (round), or `2` (square)
-sets line cap style; determines how the end points of every line are drawn;
+* `lineCap`: *`number`* - either `0` (butt), `1` (round), or `2` (square)
+
+#### PDF Specification
+Set the line cap style in the graphics state.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
@@ -154,9 +157,10 @@ sets line cap style; determines how the end points of every line are drawn;
 
 ### 4: setLineJoin (`j`)
 #### Operands
-* `style`: *`number`* - either `0` (miter), `1` (round), or `2` (bevel)
+* `lineJoin`: *`number`* - either `0` (miter), `1` (round), or `2` (bevel)
 
-sets line join style; determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together;
+#### PDF Specification
+Set the line join style in the graphics state.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
@@ -165,9 +169,10 @@ sets line join style; determines how two connecting segments (of lines, arcs or 
 
 ### 5: setMiterLimit (`M`)
 #### Operands
-* `limit`: *`number`*
+* `miterLimit`: *`number`*
 
-sets the miter limit ratio in space units
+#### PDF Specification
+Set the miter limit in the graphics state.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
@@ -176,14 +181,15 @@ sets the miter limit ratio in space units
 
 ### 6: setDash (`d`)
 #### Operands
-* `dashArray`: *`array`* - An Array of numbers which specify distances to alternately draw a line and a gap (in coordinate space units). If the number of elements in the array is odd, the elements of the array get copied and concatenated;
+* `dashArray`: *`array`* - An array of numbers which specify distances to alternately draw a line and a gap (in coordinate space units). If the number of elements in the array is odd, the elements of the array get copied and concatenated;
 
   see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
 * `dashPhase`: *`number`* - A float specifying the amount of the offset;
 
   see also: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset
 
-sets the line dash pattern used when stroking lines, using an array of values which specify alternating lengths of lines and gaps which describe the pattern
+#### PDF Specification
+Set the line dash pattern in the graphics state.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
@@ -193,14 +199,19 @@ sets the line dash pattern used when stroking lines, using an array of values wh
 #### Operands
 * `intent`: ?
 
+#### PDF Specification
+Set the colour rendering intent in the graphics state.
+
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2828](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2828)
 
 ### 8: setFlatness (`i`)
 #### Operands
-// todo
-* `flatness`: ?
+* `flatness`: `number`
+
+#### PDF Specification
+Set the flatness tolerance in the graphics state. `flatness` is a number in the range `0` to `100`; a value of `0` shall specify the output device’s default flatness tolerance.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
@@ -222,6 +233,9 @@ sets the line dash pattern used when stroking lines, using an array of values wh
   * `ca` (fill alpha)
   * `BM` (global composite operation)
   * `SMask`.
+
+#### PDF Specification
+Set the specified parameters in the graphics state. `dictName` shall be the name of a graphics state parameter dictionary in the **ExtGState** subdictionary of the current resource dictionary.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
@@ -270,6 +284,9 @@ Saves the following properties:
 * clip group (only svg)
 * mask id (only svg)
 
+#### PDF Specification
+Save the current graphics state on the graphics state stack.
+
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2831](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2831)
@@ -278,7 +295,8 @@ Saves the following properties:
 #### Operands
 *none*
 
-Restores the [previously saved values](#10-save).
+#### PDF Specification
+Restore the graphics state by removing the [most recently saved state](#10-save-q) from the stack and making it the current state.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
@@ -292,6 +310,9 @@ Restores the [previously saved values](#10-save).
 * `d` `vertScaling`: *`number`*
 * `e` `horizMoving`: *`number`*
 * `f` `vertMoving`: *`number`*
+
+#### PDF Specification
+Modify the current transformation matrix (CTM) by concatenating the specified matrix. Although the operands specify a matrix, they shall be written as six separate numbers, not as an array.
 
 #### Source
 * [PDF Specification / Table 57 – Graphics State Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793795)
