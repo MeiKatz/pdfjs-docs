@@ -1092,13 +1092,15 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 #### Operands
 *none*
 
-Documentation?
+#### Source
+* * [https://github.com/mozilla/pdf.js/.../src/core/document.js#L247](https://github.com/mozilla/pdf.js/blob/88e87ce240676d4be4ab52f6d9ed567a1827d5fa/src/core/document.js#L247)
 
 ### 79: endAnnotations
 #### Operands
 *none*
 
-Documentation?
+#### Source
+* [https://github.com/mozilla/pdf.js/.../src/core/document.js#L251](https://github.com/mozilla/pdf.js/blob/88e87ce240676d4be4ab52f6d9ed567a1827d5fa/src/core/document.js#L251)
 
 ### 80: beginAnnotation
 #### Operands
@@ -1106,13 +1108,15 @@ Documentation?
 * `transform`: ?
 * `matrix`: ?
 
-Documentation?
+#### Source
+* [https://github.com/mozilla/pdf.js/.../src/core/annotation.js#L450](https://github.com/mozilla/pdf.js/blob/ff2df9c5b64a700e06694ff3375cd54c10ccedf4/src/core/annotation.js#L450)
 
 ### 81: endAnnotation
 #### Operands
 *none*
 
-Documentation?
+#### Source
+* [https://github.com/mozilla/pdf.js/.../src/core/annotation.js#L457](https://github.com/mozilla/pdf.js/blob/ff2df9c5b64a700e06694ff3375cd54c10ccedf4/src/core/annotation.js#L457)
 
 ### 82: paintJpegXObject
 * `objId`: ?
@@ -1133,7 +1137,8 @@ Documentation?
 #### Operands
 * `images`: ?
 
-Documentation?
+#### Source
+* [https://github.com/mozilla/pdf.js/.../src/core/operator_list.js#L251](https://github.com/mozilla/pdf.js/blob/160ca551633cd7901ee68ae6ef748ec7d6ec0aed/src/core/operator_list.js#L251)
 
 ### 85: paintImageXObject
 #### Operands
@@ -1155,7 +1160,8 @@ Documentation?
 * `imgData`: ?
 * `map`: ?
 
-Documentation?
+#### Source
+* [https://github.com/mozilla/pdf.js/.../src/core/operator_list.js#L148](https://github.com/mozilla/pdf.js/blob/160ca551633cd7901ee68ae6ef748ec7d6ec0aed/src/core/operator_list.js#L148)
 
 ### 88: paintImageXObjectRepeat
 * `objId`: ?
@@ -1163,7 +1169,8 @@ Documentation?
 * `scaleY`: ?
 * `positions`: ?
 
-Documentation?
+#### Source
+* [https://github.com/mozilla/pdf.js/.../src/core/operator_list.js#L337](https://github.com/mozilla/pdf.js/blob/160ca551633cd7901ee68ae6ef748ec7d6ec0aed/src/core/operator_list.js#L337)
 
 ### 89: paintImageMaskXObjectRepeat
 * `imgData`: ?
@@ -1171,13 +1178,15 @@ Documentation?
 * `scaleY`: ?
 * `positions`: ?
 
-Documentation?
+#### Source
+* [https://github.com/mozilla/pdf.js/.../src/core/operator_list.js#L236](https://github.com/mozilla/pdf.js/blob/160ca551633cd7901ee68ae6ef748ec7d6ec0aed/src/core/operator_list.js#L236)
 
 ### 90: paintSolidColorImageMask
 #### Operands
 *none*
 
-Documentation?
+#### Source
+* [https://github.com/mozilla/pdf.js/.../src/core/operator_list.js#L45](https://github.com/mozilla/pdf.js/blob/160ca551633cd7901ee68ae6ef748ec7d6ec0aed/src/core/operator_list.js#L45)
 
 ### 91: constructPath
 #### Operands
