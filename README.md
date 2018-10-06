@@ -660,7 +660,7 @@ tx ty Td
 
 #### Source
 * [PDF Specification / Table 108 – Text-positioning operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2870](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2870)
 
 ### 42: setTextMatrix (`Tm`)
 #### Operands
@@ -687,7 +687,7 @@ The matrix specified by the operands shall not be concatenated onto the current 
 
 #### Source
 * [PDF Specification / Table 108 – Text-positioning operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2871](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2871)
 
 ### 43: nextLine (`T*`)
 #### Operands
@@ -702,7 +702,7 @@ where `Tl` denotes the current leading parameter in the text state. The negative
 
 #### Source
 * [PDF Specification / Table 108 – Text-positioning operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1849331)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2872](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2872)
 
 ### 44: showText (`Tj`)
 #### Operands
@@ -715,7 +715,7 @@ Show a text string.
 
 #### Source
 * [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2873](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2873)
 
 ### 45: showSpacedText (`TJ`)
 #### Operands
@@ -726,7 +726,7 @@ Show one or more text strings, allowing individual glyph positioning. Each eleme
 
 #### Source
 * [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2874](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2874)
 
 ### 46: nextLineShowText (`'`)
 #### Operands
@@ -743,7 +743,7 @@ string Tj
 
 #### Source
 * [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2875](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2875)
 
 ### 47: nextLineSetSpacingShowText (`"`)
 #### Operands
@@ -763,7 +763,7 @@ string '
 
 #### Source
 * [PDF Specification / Table 109 – Text-showing operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1898300)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2876-L2877](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2876-L2877)
 
 ### 48: setCharWidth (`d0`)
 #### Operands
@@ -779,7 +779,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 
 #### Source
 * [PDF Specification / Table 113 –Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2880](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2880)
 
 ### 49: setCharWidthAndBounds (`d1`)
 #### Operands
@@ -792,7 +792,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 
 #### Source
 * [PDF Specification / Table 113 –Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2881](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2881)
 
 ### 50: setStrokeColorSpace (`CS`)
 #### Operands
@@ -800,7 +800,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2885](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2885)
 
 ### 51: setFillColorSpace (`cs`)
 #### Operands
@@ -808,7 +808,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2886](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2886)
 
 ### 52: setStrokeColor (`SC`)
 #### Operands
@@ -828,7 +828,7 @@ For CMYK color spaces (DeviceCMYK):
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2887](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2887)
 
 ### 53: setStrokeColorN (`SCN`)
 #### Operands
@@ -839,7 +839,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2888](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2888)
 
 ### 54: setFillColor (`sc`)
 #### Operands
@@ -850,7 +850,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2889](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2889)
 
 ### 55: setFillColorN (`scn`)
 #### Operands
@@ -858,7 +858,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2890](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2890)
 
 ### 56: setStrokeGray (`G`)
 #### Operands
@@ -866,7 +866,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2891](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2891)
 
 ### 57: setFillGray (`g`)
 #### Operands
@@ -874,7 +874,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2892](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2892)
 
 ### 58: setStrokeRGBColor (`RG`)
 #### Operands
@@ -884,7 +884,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2893](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2893)
 
 ### 59: setFillRGBColor (`rg`)
 #### Operands
@@ -894,7 +894,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2894](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2894)
 
 ### 60: setStrokeCMYKColor (`K`)
 #### Operands
@@ -905,7 +905,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2895](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2895)
 
 ### 61: setFillCMYKColor (`k`)
 #### Operands
@@ -916,7 +916,7 @@ or
 
 #### Source
 * [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2896](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2896)
 
 ### 62: shadingFill (`sh`)
 #### Operands
@@ -924,7 +924,7 @@ or
 
 #### Source
 * [PDF Specification / Table 77 – Shading Operator](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1851121)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2899](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2899)
 
 ### 63: beginInlineImage (`BI`)
 #### Operands
@@ -935,7 +935,7 @@ Begin an inline image object.
 
 #### Source
 * [PDF Specification / Table 92 – Inline Image Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2902](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2902)
 
 ### 64: beginImageData (`ID`)
 #### Operands
@@ -946,7 +946,7 @@ Begin the image data for an inline image object.
 
 #### Source
 * [PDF Specification / Table 92 – Inline Image Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2903](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2903)
 
 ### 65: endInlineImage (`EI`)
 #### Operands
@@ -957,7 +957,7 @@ End an inline image object.
 
 #### Source
 * [PDF Specification / Table 92 – Inline Image Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.1852045)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2904](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2904)
 
 ### 66: paintXObject (`Do`)
 #### Operands
