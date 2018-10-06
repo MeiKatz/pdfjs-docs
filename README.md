@@ -5,109 +5,108 @@ The list of operations contains all operations as defined in the PDF Specificati
 
 ### Overview
 #### General graphics state
-* [`setLineWidth`](#2-setlinewidth-w)
-* [`setLineCap`](#3-setlinecap-j)
-* [`setLineJoin`](#4-setlinejoin-j)
-* [`setMiterLimit`](#5-setmiterlimit-m)
-* [`setDash`](#6-setdash-d)
-* [`setRenderingIntent`](#7-setrenderingintent-ri)
-* [`setFlatness`](#8-setflatness-i)
-* [`setGState`](#9-setgstate-gs)
+* [`setLineWidth`](#2-setlinewidth-w) (`w`)
+* [`setLineCap`](#3-setlinecap-j) (`J`)
+* [`setLineJoin`](#4-setlinejoin-j) (`j`)
+* [`setMiterLimit`](#5-setmiterlimit-m) (`M`)
+* [`setDash`](#6-setdash-d) (`d`)
+* [`setRenderingIntent`](#7-setrenderingintent-ri) (`ri`)
+* [`setFlatness`](#8-setflatness-i) (`i`)
+* [`setGState`](#9-setgstate-gs) (`gs`)
 
 #### Special graphics state
-* [`save`](#10-save-q)
-* [`restore`](#11-restore-q)
-* [`transform`](#12-transform-cm)
+* [`save`](#10-save-q) (`q`)
+* [`restore`](#11-restore-q) (`Q`)
+* [`transform`](#12-transform-cm) (`cm`)
 
 #### Path construction
-* [`moveTo`](#13-moveto-m)
-* [`lineTo`](#14-lineto-l)
-* [`curveTo`](#15-curveto-c)
-* [`curveTo2`](#16-curveto2-v)
-* [`curveTo3`](#17-curveto3-y)
-* [`closePath`](#18-closepath-h)
-* [`rectangle`](#19-rectangle-re)
+* [`moveTo`](#13-moveto-m) (`m`)
+* [`lineTo`](#14-lineto-l) (`l`)
+* [`curveTo`](#15-curveto-c) (`c`)
+* [`curveTo2`](#16-curveto2-v) (`v`)
+* [`curveTo3`](#17-curveto3-y) (`y`)
+* [`closePath`](#18-closepath-h) (`h`)
+* [`rectangle`](#19-rectangle-re) (`re`)
 
 #### Path painting
-* S
-* s
-* f
-* F
-* f*
-* B
-* B*
-* b
-* b*
-* n
+* (`S`)
+* (`s`)
+* (`f` / `F`)
+* (`f*`)
+* (`B`)
+* (`B*`)
+* (`b`)
+* (`b*`)
+* (`n`)
 
 #### Clipping paths
-* W
-* W*
+* (`W`)
+* (`W*`)
 
 #### Text objects
-* BT
-* ET
+* (`BT`)
+* (`ET`)
 
 #### Text state
-* Tc
-* Tw
-* Tz
-* TL
-* Tf
-* Tr
-* Ts
+* (`Tc`)
+* (`Tw`)
+* (`Tz`)
+* (`TL`)
+* (`Tf`)
+* (`Tr`)
+* (`Ts`)
 
 #### Text positioning
-* Td
-* TD
-* Tm
-* T*
+* (`Td`)
+* (`TD`)
+* (`Tm`)
+* (`T*`)
 
 #### Text showing
-* Tj
-* TJ
-* '
-* "
+* (`Tj`)
+* (`TJ`)
+* (`'`)
+* (`"`)
 
 #### Type 3 fonts
-* d0
-* d1
+* (`d0`)
+* (`d1`)
 
 #### Color
-* CS
-* cs
-* SC
-* SCN
-* sc
-* scn
-* G
-* g
-* RG
-* rg
-* K
-* k
+* (`CS`)
+* (`cs`)
+* (`SC`)
+* (`SCN`)
+* (`sc`)
+* (`scn`)
+* (`G`)
+* (`g`)
+* (`RG`)
+* (`rg`)
+* (`K`)
+* (`k`)
 
 #### Shading patterns
-* sh
+* (`sh`)
 
 #### Inline images
-* BI
-* ID
-* EI
+* (`BI`)
+* (`ID`)
+* (`EI`)
 
 #### XObjects
-* Do
+* (`Do`)
 
 #### Marked content
-* MP
-* DP
-* BMC
-* BDC
-* EMC
+* (`MP`)
+* (`DP`)
+* (`BMC`)
+* (`BDC`)
+* (`EMC`)
 
 #### Compatibility
-* BX
-* EX
+* (`BX`)
+* (`EX`)
 
 #### PDF.js only
 * [`dependency`](#1-dependency)
