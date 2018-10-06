@@ -1,7 +1,7 @@
 # Documentation of the core of Mozilla's PDF.js library
 ## Operations
 ### Preliminary mark
-The list of operations contains all operations as defined in the PDF Specification that are used in PDF.js, aside with the operations that are only defined by PDF.js. The first group of operations show the operator, operands and describtion as defined in the PDF Specification. In the second group I tried to describe the operations as good as possible.
+The list of operations contains all operations as defined in the PDF Specification that are used in PDF.js, aside with the operations that are only defined by PDF.js. The first group of operations show the operator, operands and description as defined in the PDF Specification. In the second group I tried to describe the operations as good as possible.
 
 ### Overview
 #### General graphics state
