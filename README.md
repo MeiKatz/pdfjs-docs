@@ -968,7 +968,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 #### Source
 * [PDF Specification / Table 87 – XObject Operator](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3987702)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2907](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2907)
 
 ### 67: markPoint (`MP`)
 #### Operands
@@ -976,7 +976,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2908](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2908)
 
 ### 68: markPointProps (`DP`)
 #### Operands
@@ -985,7 +985,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2909](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2909)
 
 ### 69: beginMarkedContent (`BMC`)
 #### Operands
@@ -993,7 +993,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2910](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2910)
 
 ### 70: beginMarkedContentProps (`BDC`)
 #### Operands
@@ -1002,7 +1002,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2911-L2912](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2911-L2912)
 
 ### 71: endMarkedContent (`EMC`)
 #### Operands
@@ -1010,7 +1010,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2913](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2913)
 
 ### 72: beginCompat (`BX`)
 #### Operands
@@ -1018,7 +1018,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 #### Source
 * [PDF Specification / Table 32 – Compatibility operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072)
-*
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2916](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2916)
 
 ### 73: endCompat (`EX`)
 #### Operands
@@ -1026,7 +1026,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 #### Source
 * [PDF Specification / Table 32 – Compatibility operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072)
-* 
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2917](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2917)
 
 ### 74: paintFormXObjectBegin
 #### Operands
@@ -1034,14 +1034,14 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 * `bbox`: ?
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L331
+[https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L331](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L331)
 
 ### 75: paintFormXObjectEnd
 #### Operands
 *none*
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L340
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L340](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L340)
 
 ### 76: beginGroup
 #### Operands
@@ -1053,7 +1053,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
   * `knockout`: `boolean` (default value: `false`)
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L328
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L328](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L328)
 
 ### 77: endGroup
 #### Operands
@@ -1065,7 +1065,7 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
   * `knockout`: `boolean` (default value: `false`)
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L343
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L343](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L343)
 
 ### 78: beginAnnotations
 #### Operands
@@ -1099,14 +1099,14 @@ Documentation?
 * `h`: ?
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L441
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L441](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L441)
 
 ### 83: paintImageMaskXObject
 #### Operands
 * `imgData`: ?
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L390
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L390](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L390)
 
 ### 84: paintImageMaskXObjectGroup
 #### Operands
@@ -1121,14 +1121,14 @@ Documentation?
 * `h`: ?
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L499
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L499](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L499)
 
 ### 86: paintInlineImageXObject
 #### Operands
 * `imgData`: ?
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L417
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L417](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L417)
 
 ### 87: paintInlineImageXObjectGroup
 * `imgData`: ?
@@ -1153,7 +1153,8 @@ Documentation?
 Documentation?
 
 ### 90: paintSolidColorImageMask
-*no parameters*
+#### Operands
+*none*
 
 Documentation?
 
@@ -1163,4 +1164,4 @@ Documentation?
 * `args`: ?
 
 #### Source
-* https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L881
+* [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L881](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L881)
