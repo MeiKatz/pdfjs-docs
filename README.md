@@ -29,9 +29,9 @@ The list of operations contains all operations as defined in the PDF Specificati
 * [`rectangle`](#19-rectangle-re) (`re`)
 
 #### Path painting
-* (`S`)
-* (`s`)
-* (`f` / `F`)
+* [`stroke`](#20-stroke-s) (`S`)
+* [`closeStroke`](#21-closestroke-s) (`s`)
+* [`fill`](#22-fill-f--f) (`f` / `F`)
 * (`f*`)
 * (`B`)
 * (`B*`)
