@@ -778,7 +778,7 @@ Set width information for the glyph and declare that the glyph description speci
 This operator shall only be permitted in a content stream appearing in a Type 3 font’s **CharProcs** dictionary. It is  typically used only if the glyph description executes operators to set the colour explicitly. 
 
 #### Source
-* [PDF Specification / Table 113 –Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
+* [PDF Specification / Table 113 – Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2880](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2880)
 
 ### 49: setCharWidthAndBounds (`d1`)
@@ -791,7 +791,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 * `ury`: ?
 
 #### Source
-* [PDF Specification / Table 113 –Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
+* [PDF Specification / Table 113 – Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2881](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2881)
 
 ### 50: setStrokeColorSpace (`CS`)
@@ -799,7 +799,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 * `name`: *`string`*
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2885](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2885)
 
 ### 51: setFillColorSpace (`cs`)
@@ -807,7 +807,7 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 * `name`: *`string`*
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2886](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2886)
 
 ### 52: setStrokeColor (`SC`)
@@ -827,7 +827,7 @@ For CMYK color spaces (DeviceCMYK):
 * `k`: *`number`*
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2887](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2887)
 
 ### 53: setStrokeColorN (`SCN`)
@@ -838,7 +838,7 @@ or
 * `name`
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2888](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2888)
 
 ### 54: setFillColor (`sc`)
@@ -849,7 +849,7 @@ or
 * ? // variable
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2889](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2889)
 
 ### 55: setFillColorN (`scn`)
@@ -857,7 +857,7 @@ or
 * ? (33) // variable
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2890](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2890)
 
 ### 56: setStrokeGray (`G`)
@@ -865,7 +865,7 @@ or
 * `gray`: *`number`* - value between `0.0` (black) and `1.0` (white)
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2891](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2891)
 
 ### 57: setFillGray (`g`)
@@ -873,7 +873,7 @@ or
 * `gray`: *`number`* - value between `0.0` (black) and `1.0` (white).
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2892](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2892)
 
 ### 58: setStrokeRGBColor (`RG`)
@@ -883,7 +883,7 @@ or
 * `b`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2893](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2893)
 
 ### 59: setFillRGBColor (`rg`)
@@ -893,7 +893,7 @@ or
 * `b`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2894](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2894)
 
 ### 60: setStrokeCMYKColor (`K`)
@@ -904,7 +904,7 @@ or
 * `k`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2895](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2895)
 
 ### 61: setFillCMYKColor (`k`)
@@ -915,7 +915,7 @@ or
 * `k`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
 
 #### Source
-* [PDF Specification / Table 74 –Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
+* [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2896](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2896)
 
 ### 62: shadingFill (`sh`)
