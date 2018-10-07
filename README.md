@@ -769,8 +769,8 @@ string Tj
 ### 47: nextLineSetSpacingShowText (`"`)
 #### Operands
 Operands differ between the PDF specification and the implementation in PDF.js.
-* `aw`: *`number`*
-* `ac`: *`number`*
+* `aw`: *`number`* (same)
+* `ac`: *`number`* (same)
 * `string`: *`string`* (PDF Specification)
 * `glyphs`: *`array`* (implementation in PDF.js)
 
@@ -864,7 +864,7 @@ Same as **`CS`** *([`setStrokeColorSpace`](#50-setstrokecolorspace-cs))* but use
 ### 52: setStrokeColor (`SC`)
 #### Operands
 For gray color spaces (DeviceGray, CalGray or Indexed):
-* `scale`: *`number`*
+* `level`: *`number`*
 
 For RGB color spaces (DeviceRGB, CalRGB or Lab):
 * `r`: *`number`*
@@ -889,9 +889,9 @@ Set the colour to use for stroking operations in a device, CIE-based (other than
 
 ### 53: setStrokeColorN (`SCN`)
 #### Operands
-* `c1` ... `cn` (`n` <= 32)
+* `c1` ... `cn` (`n` ≤ 32)
 or
-* `c1` ... `cn` (`n` <= 32)
+* `c1` ... `cn` (`n` ≤ 32)
 * `name`
 
 #### PDF Specification
@@ -907,10 +907,19 @@ If the current stroking colour space is a **Pattern** colour space, `name` shall
 
 ### 54: setFillColor (`sc`)
 #### Operands
-* ?
-* ?
-* ?
-* ? // variable
+For gray color spaces (DeviceGray, CalGray or Indexed):
+* `level`: *`number`*
+
+For RGB color spaces (DeviceRGB, CalRGB or Lab):
+* `r`: *`number`*
+* `g`: *`number`*
+* `b`: *`number`*
+
+For CMYK color spaces (DeviceCMYK):
+* `c`: *`number`*
+* `m`: *`number`*
+* `y`: *`number`*
+* `k`: *`number`*
 
 #### PDF Specification
 Same as **`SC`** *([`setStrokeColor`](#52-setstrokecolor-sc))* but used for nonstroking operations.
@@ -921,7 +930,10 @@ Same as **`SC`** *([`setStrokeColor`](#52-setstrokecolor-sc))* but used for nons
 
 ### 55: setFillColorN (`scn`)
 #### Operands
-* ? (33) // variable
+* `c1` ... `cn` (`n` ≤ 32)
+or
+* `c1` ... `cn` (`n` ≤ 32)
+* `name`
 
 #### PDF Specification
 Same as **`SCN`** *([`setStrokeColorN`](#53-setstrokecolorn-scn))* but used for nonstroking operations.
@@ -1261,8 +1273,8 @@ End a compatibility section begun by a balancing **`BX`** *([`beginCompat`](#72-
 
 ### 88: paintImageXObjectRepeat
 * `objId`: ?
-* `scaleX`: ?
-* `scaleY`: ?
+* `scaleX`: *`number`*
+* `scaleY`: *`number`*
 * `positions`: ?
 
 #### Source
@@ -1270,8 +1282,8 @@ End a compatibility section begun by a balancing **`BX`** *([`beginCompat`](#72-
 
 ### 89: paintImageMaskXObjectRepeat
 * `imgData`: ?
-* `scaleX`: ?
-* `scaleY`: ?
+* `scaleX`: *`number`*
+* `scaleY`: *`number`*
 * `positions`: ?
 
 #### Source
@@ -1286,8 +1298,20 @@ End a compatibility section begun by a balancing **`BX`** *([`beginCompat`](#72-
 
 ### 91: constructPath
 #### Operands
-* `ops`: ?
-* `args`: ?
+* `ops`: *`array`* - a list of operation indexes (can be any of [`moveTo`](#13-moveto-m) (`13`), [`lineTo`](#14-lineto-l) (`14`), [`curveTo`](#15-curveto-c) (`15`), [`curveTo2`](#16-curveto2-v) (`16`), [`curveTo3`](#17-curveto3-y) (`17`, [`closePath`](18-closepath-h) (`18`), or [`rectangle`](#19-rectangle-re) (`19`))
+* `args`: *`array`* - a list of associated arguments for the operations defined in `ops`
+
+#### Example
+```
+{
+  "ops": [ 19, 13, 14 ],
+  "args": [ 0, 0, 5, 6, 6, 0, 4, 3 ],
+}
+```
+This would draw a rectangle (`19`) from the point (`0`, `0`) with a width of `5` and a height of `6`, than move the cursor (`13`) to the point (`6`, `0`) and afterwards draw a line (`14`) from this point to the point (`4`, `3`):
+* `rectangle`: [ `0`, `0`, `5`, `6` ]
+* `moveTo`: [ `6`, `0` ]
+* `lineTo`: [ `4`, `4` ]
 
 #### Source
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L881](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L881)
