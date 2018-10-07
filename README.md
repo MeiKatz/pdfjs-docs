@@ -552,7 +552,7 @@ Modify the current clipping path by intersecting it with the current path, using
 *none*
 
 #### PDF Specification
-Begin a text object, initializing the text matrix and the text line matrix to the identity matrix. Text objects shall not be nested; a second **`BT`** shall not appear before an **`ET`**. 
+Begin a text object, initializing the text matrix and the text line matrix to the identity matrix. Text objects shall not be nested; a second **`BT`** shall not appear before an **`ET`** *([`endText`](#32-endtext-et))*. 
 
 #### Source
 * [PDF Specification / Table 107 – Text object operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1958458)
