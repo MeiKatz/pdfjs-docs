@@ -74,39 +74,39 @@ The list of operations contains all operations as defined in the PDF Specificati
 
 #### Color
 * [`setStrokeColorSpace`](#50-setstrokecolorspace-cs) (`CS`)
-* (`cs`)
-* (`SC`)
-* (`SCN`)
-* (`sc`)
-* (`scn`)
-* (`G`)
-* (`g`)
-* (`RG`)
-* (`rg`)
-* (`K`)
-* (`k`)
+* [`setFillColorSpace`](#51-setfillcolorspace-cs) (`cs`)
+* [`setStrokeColor`](#52-setstrokecolor-sc) (`SC`)
+* [`setStrokeColorN`](#53-setstrokecolorn-scn) (`SCN`)
+* [`setFillColor`](#54-setfillcolor-sc) (`sc`)
+* [`setFillColorN`](#55-setfillcolorn-scn) (`scn`)
+* [`setStrokeGray`](#56-setstrokegray-g) (`G`)
+* [`setFillGray`](#57-setfillgray-g) (`g`)
+* [`setStrokeRGBColor`](#58-setstrokergbcolor-rg) (`RG`)
+* [`setFillRGBColor`](#59-setfillrgbcolor-rg) (`rg`)
+* [`setStrokeCMYKColor`](#60-setstrokecmykcolor-k) (`K`)
+* [`setFillCMYKColor`](#61-setfillcmykcolor-k) (`k`)
 
 #### Shading patterns
-* (`sh`)
+* [`shadingFill`](#62-shadingfill-sh) (`sh`)
 
 #### Inline images
-* (`BI`)
-* (`ID`)
-* (`EI`)
+* [`beginInlineImage`](#63-begininlineimage-bi) (`BI`)
+* [`beginImageData`](#64-beginimagedata-id) (`ID`)
+* [`endInlineImage`](#65-endinlineimage-ei) (`EI`)
 
 #### XObjects
-* (`Do`)
+* [`paintXObject`](#66-paintxobject-do) (`Do`)
 
 #### Marked content
-* (`MP`)
-* (`DP`)
-* (`BMC`)
-* (`BDC`)
-* (`EMC`)
+* [`markPoint`](#67-markpoint-mp) (`MP`)
+* [`markPointProps`](#68-markpointprops-dp) (`DP`)
+* [`beginMarkedContent`](#69-beginmarkedcontent-bmc) (`BMC`)
+* [`beginMarkedContentProps`](#70-beginmarkedcontentprops-bdc) (`BDC`)
+* [`endMarkedContent`](#71-endmarkedcontent-emc) (`EMC`)
 
 #### Compatibility
-* (`BX`)
-* (`EX`)
+* [`beginCompat`](#72-begincompat-bx) (`BX`)
+* [`endCompat`](#73-endcompat-ex) (`EX`)
 
 #### PDF.js only
 * [`dependency`](#1-dependency)
@@ -221,14 +221,14 @@ Set the flatness tolerance in the graphics state. `flatness` is a number in the 
 #### Operands
 * `states`: *`array`* - An array of key-value pairs where the first element of the pair is the key and the second element is the value.
   Keys may be any of the following:
-  * `LW` ([setLineWidth](#2-setlinewidth))
-  * `LC` ([setLineCap](#3-setlinecap))
-  * `LJ` ([setLineJoin](#4-setlinejoin))
-  * `ML` ([setMiterLimit](#5-setmiterlimit))
-  * `D` ([setDash](#6-setdash))
-  * `RI` ([setRenderingIntent](#7-setrenderingintent))
-  * `FL` ([setFlatness](#8-setflatness))
-  * `Font` ([setFont](#37-setfont))
+  * `LW` ([setLineWidth](#2-setlinewidth-w))
+  * `LC` ([setLineCap](#3-setlinecap-j))
+  * `LJ` ([setLineJoin](#4-setlinejoin-j))
+  * `ML` ([setMiterLimit](#5-setmiterlimit-m))
+  * `D` ([setDash](#6-setdash-d))
+  * `RI` ([setRenderingIntent](#7-setrenderingintent-ri))
+  * `FL` ([setFlatness](#8-setflatness-i))
+  * `Font` ([setFont](#37-setfont-tf))
   * `CA` (stroke alpha)
   * `ca` (fill alpha)
   * `BM` (global composite operation)
