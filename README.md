@@ -1045,6 +1045,9 @@ Designate a marked-content point with an associated property list. `tag` shall b
 #### Operands
 * `tag`: ?
 
+#### PDF Specification
+Begin a marked-content sequence terminated by a balancing **`EMC`** *([`endMarkedContent`](#71-endmarkedcontent-emc))* operator. `tag` shall be a name object indicating the role or significance of the sequence.
+
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2910](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2910)
@@ -1054,6 +1057,9 @@ Designate a marked-content point with an associated property list. `tag` shall b
 * `tag`: ?
 * `properties`: ?
 
+#### PDF Specification
+Begin a marked-content sequence with an associated property list, terminated by a balancing **`EMC`** *([`endMarkedContent`](#71-endmarkedcontent-emc))* operator. `tag` shall be a name object indicating the role or significance of the sequence. `properties` shall be either an inline dictionary containing the property list or a name object associated with it in the **Properties** subdictionary of the current resource dictionary.
+
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2911-L2912](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2911-L2912)
@@ -1061,6 +1067,9 @@ Designate a marked-content point with an associated property list. `tag` shall b
 ### 71: endMarkedContent (`EMC`)
 #### Operands
 *none*
+
+#### PDF Specification
+End a marked-content sequence begun by a **`BMC`** *([`beginMarkedContent`](#69-beginmarkedcontent-bmc))* or **`BDC`** *([`beginMarkedContentProps`](#70-beginmarkedcontentprops-bdc))* operator.
 
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
