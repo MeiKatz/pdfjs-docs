@@ -1301,6 +1301,9 @@ End a compatibility section begun by a balancing **`BX`** *([`beginCompat`](#72-
 * `ops`: *`array`* - a list of operation indexes (can be any of [`moveTo`](#13-moveto-m) (`13`), [`lineTo`](#14-lineto-l) (`14`), [`curveTo`](#15-curveto-c) (`15`), [`curveTo2`](#16-curveto2-v) (`16`), [`curveTo3`](#17-curveto3-y) (`17`, [`closePath`](18-closepath-h) (`18`), or [`rectangle`](#19-rectangle-re) (`19`))
 * `args`: *`array`* - a list of associated arguments for the operations defined in `ops`
 
+#### Description
+Represents a collection of path construction operations. Is there because of speed optimization so paths can be drawn in a batch.
+
 #### Example
 ```
 {
