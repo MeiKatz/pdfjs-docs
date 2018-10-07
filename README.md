@@ -1022,6 +1022,9 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 #### Operands
 * `tag`: ?
 
+#### PDF Specification
+Designate a marked-content point. `tag` shall be a name object indicating the role or significance of the point.
+
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2908](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2908)
@@ -1030,6 +1033,9 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 #### Operands
 * `tag`: ?
 * `properties`: ?
+
+#### PDF Specification
+Designate a marked-content point with an associated property list. `tag` shall be a name object indicating the role or significance of the point. `properties` shall be either an inline dictionary containing the property list or a name object associated with it in the **Properties** subdictionary of the current resource dictionary.
 
 #### Source
 * [PDF Specification / Table 320 – Marked-content operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G13.2438921)
@@ -1064,6 +1070,9 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 #### Operands
 *none*
 
+#### PDF Specification
+Begin a compatibility section. Unrecognized operators (along with their operands) shall be ignored without error until the balancing **`EX`** *([`endCompat`](#73-endcompat-ex))* operator is encountered.
+
 #### Source
 * [PDF Specification / Table 32 – Compatibility operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2916](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2916)
@@ -1071,6 +1080,9 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 ### 73: endCompat (`EX`)
 #### Operands
 *none*
+
+#### PDF Specification
+End a compatibility section begun by a balancing **`BX`** *([`beginCompat`](#72-begincompat-bx))* operator. Ignore any unrecognized operands and operators  from previous matching **`BX`** onward.
 
 #### Source
 * [PDF Specification / Table 32 – Compatibility operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G6.1913072)
