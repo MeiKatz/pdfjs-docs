@@ -32,48 +32,48 @@ The list of operations contains all operations as defined in the PDF Specificati
 * [`stroke`](#20-stroke-s) (`S`)
 * [`closeStroke`](#21-closestroke-s) (`s`)
 * [`fill`](#22-fill-f--f) (`f` / `F`)
-* (`f*`)
-* (`B`)
-* (`B*`)
-* (`b`)
-* (`b*`)
-* (`n`)
+* [`eoFill`](#23-eofill-f) (`f*`)
+* [`fillStroke`](#24-fillstroke-b) (`B`)
+* [`eoFillStroke`](#25-eofill-stroke-b) (`B*`)
+* [`closeFillStroke`](#26-closefillstroke-b) (`b`)
+* [`closeEOFillStroke`](#27-closeeofillstroke-b) (`b*`)
+* [`endPath`](#28-endpath-n) (`n`)
 
 #### Clipping paths
-* (`W`)
-* (`W*`)
+* [`clip`](#29-clip-w) (`W`)
+* [`eoClip`](#30-eoclip-w) (`W*`)
 
 #### Text objects
-* (`BT`)
-* (`ET`)
+* [`beginnText`](#31-beginntext-bt) (`BT`)
+* [`endText`](#32-endtext-et) (`ET`)
 
 #### Text state
-* (`Tc`)
-* (`Tw`)
-* (`Tz`)
-* (`TL`)
-* (`Tf`)
-* (`Tr`)
-* (`Ts`)
+* [`setCharSpacing`](#33-setcharspacing-tc) (`Tc`)
+* [`setWordSpacing`](#34-setwordspacing-tw) (`Tw`)
+* [`setHScale`](#35-sethscale-tz) (`Tz`)
+* [`setLeading`](#36-setleading-tl) (`TL`)
+* [`setFont`](#37-setfont-tf) (`Tf`)
+* [`setTextRenderingIntent`](#38-settextrenderingintent-tr) (`Tr`)
+* [`setTextRise`](#39-settextrise-ts) (`Ts`)
 
 #### Text positioning
-* (`Td`)
-* (`TD`)
-* (`Tm`)
-* (`T*`)
+* [`moveText`](#40-movetext-td) (`Td`)
+* [`setLeadingMoveText`](#41-setleadingmovetext-td) (`TD`)
+* [`setTextMatrix`](#42-settextmatrix-tm) (`Tm`)
+* [`nextLine`](#43-nextline-t) (`T*`)
 
 #### Text showing
-* (`Tj`)
-* (`TJ`)
-* (`'`)
-* (`"`)
+* [`showText`](#44-showtext-tj) (`Tj`)
+* [`showSpacedText`](#45-showspacedtext-tj) (`TJ`)
+* [`nextLineShowText`](#46-nextlineshowtext-) (`'`)
+* [`nextLineSetSpacingShowText`](#47-nextlinesetspacingshowtext-) (`"`)
 
 #### Type 3 fonts
-* (`d0`)
-* (`d1`)
+* [`setCharWidth`](#48-setcharwidth-d0) (`d0`)
+* [`setCharWidthAndBounds`](#49-setcharwidthandbounds-d1) (`d1`)
 
 #### Color
-* (`CS`)
+* [`setStrokeColorSpace`](#50-setstrokecolorspace-cs) (`CS`)
 * (`cs`)
 * (`SC`)
 * (`SCN`)
