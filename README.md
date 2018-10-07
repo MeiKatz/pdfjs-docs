@@ -208,7 +208,7 @@ Set the colour rendering intent in the graphics state.
 
 ### 8: setFlatness (`i`)
 #### Operands
-* `flatness`: `number`
+* `flatness`: *`number`*
 
 #### PDF Specification
 Set the flatness tolerance in the graphics state. `flatness` is a number in the range `0` to `100`; a value of `0` shall specify the output device’s default flatness tolerance.
@@ -304,12 +304,12 @@ Restore the graphics state by removing the [most recently saved state](#10-save-
 
 ### 12: transform (`cm`)
 #### Operands
-* `a` `horizScaling`: *`number`*
-* `b` `horizSkewing`: *`number`*
-* `c` `vertSkewing`: *`number`*
-* `d` `vertScaling`: *`number`*
-* `e` `horizMoving`: *`number`*
-* `f` `vertMoving`: *`number`*
+* `a`: *`number`* - horizontal scaling
+* `b`: *`number`* - horizontal skewing
+* `c`: *`number`* - vertical skewing
+* `d`: *`number`* - vertical scaling
+* `e`: *`number`* - horizontal moving
+* `f`: *`number`* - vertical moving
 
 #### PDF Specification
 Modify the current transformation matrix (CTM) by concatenating the specified matrix. Although the operands specify a matrix, they shall be written as six separate numbers, not as an array.
@@ -685,12 +685,12 @@ tx ty Td
 
 ### 42: setTextMatrix (`Tm`)
 #### Operands
-* `a` `horizScaling`: *`number`*
-* `b` `horizSkewing`: *`number`*
-* `c` `vertSkewing`: *`number`*
-* `d` `vertScaling`: *`number`*
-* `e` `horizMoving`: *`number`*
-* `f` `vertMoving`: *`number`*
+* `a`: *`number`* - horizontal scaling
+* `b`: *`number`* - horizontal skewing
+* `c`: *`number`* - vertical skewing
+* `d`: *`number`* - vertical scaling
+* `e`: *`number`* - horizontal moving
+* `f`: *`number`* - vertical moving
 
 #### PDF Specification
 Set the text matrix, **Tm**, and the text line matrix, **Tlm**:
@@ -1078,12 +1078,12 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 ### 77: endGroup
 #### Operands
-* `groupOptions`: `object`
+* `groupOptions`: *`object`*
   * `matrix`: ?
   * `bbox`: ?
   * `smask`: ?
-  * `isolated`: `boolean` (default value: `false`)
-  * `knockout`: `boolean` (default value: `false`)
+  * `isolated`: *`boolean`* (default value: `false`)
+  * `knockout`: *`boolean`* (default value: `false`)
 
 #### Source
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L343](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L343)
@@ -1120,8 +1120,8 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 
 ### 82: paintJpegXObject
 * `objId`: ?
-* `w`: ?
-* `h`: ?
+* `w`: *`number`*
+* `h`: *`number`*
 
 #### Source
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L441](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L441)
@@ -1143,8 +1143,8 @@ Paint the specified XObject. The operand `name` shall appear as a key in the **X
 ### 85: paintImageXObject
 #### Operands
 * `objId`: ?
-* `w`: ?
-* `h`: ?
+* `w`: *`number`*
+* `h`: *`number`*
 
 #### Source
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L499](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L499)
