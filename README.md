@@ -854,6 +854,9 @@ substituted.
 #### Operands
 * `name`: *`string`*
 
+#### PDF Specification
+Same as **`CS`** *([`setStrokeColorSpace`](#50-setstrokecolorspace-cs))* but used for nonstroking operations.
+
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2886](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2886)
@@ -874,6 +877,12 @@ For CMYK color spaces (DeviceCMYK):
 * `y`: *`number`*
 * `k`: *`number`*
 
+#### PDF Specification
+Set the colour to use for stroking operations in a device, CIE-based (other than **ICCBased**), or **Indexed** colour space. The number of operands required and their interpretation depends on the current stroking colour space:
+* For **DeviceGray**, **CalGray**, and **Indexed** colour spaces, one operand shall be required (`n` = `1`).
+* For **DeviceRGB**, **CalRGB**, and **Lab** colour spaces, three operands shall be required (`n` = `3`).
+* For **DeviceCMYK** four operands shall be required (`n` = `4`).
+
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2887](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2887)
@@ -884,6 +893,13 @@ For CMYK color spaces (DeviceCMYK):
 or
 * `c1` ... `cn` (`n` <= 32)
 * `name`
+
+#### PDF Specification
+Same as **`SC`** *([`setStrokeColor`](#52-setstrokecolor-sc))* but also supports **Pattern**, **Separation**, **DeviceN** and **ICCBased** colour spaces.
+
+If the current stroking colour space is a **Separation**, **DeviceN**, or **ICCBased** colour space, the operands `c1` ... `cn` shall be numbers. The number of operands and their interpretation depends on the colour space.
+
+If the current stroking colour space is a **Pattern** colour space, `name` shall be the name of an entry in the **Pattern** subdictionary of the current resource dictionary. For an uncoloured tiling pattern (**PatternType** = `1` and **PaintType** = `2`), `c1` ... `cn` shall be component values specifying a colour in the pattern’s underlying colour space. For other types of patterns, these operands shall not be specified.
 
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
@@ -896,6 +912,9 @@ or
 * ?
 * ? // variable
 
+#### PDF Specification
+Same as **`SC`** *([`setStrokeColor`](#52-setstrokecolor-sc))* but used for nonstroking operations.
+
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2889](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2889)
@@ -903,6 +922,9 @@ or
 ### 55: setFillColorN (`scn`)
 #### Operands
 * ? (33) // variable
+
+#### PDF Specification
+Same as **`SCN`** *([`setStrokeColorN`](#53-setstrokecolorn-scn))* but used for nonstroking operations.
 
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
@@ -912,6 +934,9 @@ or
 #### Operands
 * `gray`: *`number`* - value between `0.0` (black) and `1.0` (white)
 
+#### PDF Specification
+Set the stroking colour space to **DeviceGray** (or the **DefaultGray** colour space) and set the gray level to use for stroking operations. `gray` shall be a number between `0.0` (black) and `1.0` (white).
+
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2891](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2891)
@@ -919,6 +944,9 @@ or
 ### 57: setFillGray (`g`)
 #### Operands
 * `gray`: *`number`* - value between `0.0` (black) and `1.0` (white).
+
+#### PDF Specification
+Same as **`G`** *([`setStrokeGray`](#56-setstrokegray-g))* but used for nonstroking operations.
 
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
@@ -930,6 +958,9 @@ or
 * `g`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
 * `b`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
 
+#### PDF Specification
+Set the stroking colour space to **DeviceRGB** (or the **DefaultRGB** colour space) and set the colour to use for stroking operations. Each operand shall be a number between `0.0` (minimum intensity) and `1.0` (maximum intensity).
+
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2893](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2893)
@@ -939,6 +970,9 @@ or
 * `r`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
 * `g`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
 * `b`: *`number`* - value between `0.0` (minimum intensity) and `1.0` (maximum intensity)
+
+#### PDF Specification
+Same as **`RG`** *([`setStrokeRGBColor`](#58-setstrokecolor-rg))* but used for nonstroking operations.
 
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
@@ -951,6 +985,9 @@ or
 * `y`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
 * `k`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
 
+#### PDF Specification
+Set the stroking colour space to **DeviceCMYK** (or the **DefaultCMYK** colour space) and set the colour to use for stroking operations. Each operand shall be a number between `0.0` (zero concentration) and `1.0` (maximum concentration). The behaviour of this  operator  is  affected  by  the  overprint  mode.
+
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2895](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2895)
@@ -961,6 +998,9 @@ or
 * `m`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
 * `y`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
 * `k`: *`number`* - value between `0.0` (zero concentration) and `1.0` (maximum concentration)
+
+#### PDF Specification
+Same as **`K`** *([`setStrokeCMYKColor`](#60-setstrokecmykcolor-k))* but used for nonstroking operations.
 
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
