@@ -811,6 +811,19 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 * `urx`: ?
 * `ury`: ?
 
+#### PDF Specification
+Set width and bounding box information for the glyph and declare that the glyph description specifies only shape, not colour.
+
+`wx` denotes the horizontal displacement in the glyph coordinate system; it shall be consistent with the corresponding width in the font’s **Widths** array. `wy` shall be `0`.
+
+`llx` and `lly` denote the coordinates of the lower-left corner, and `urx` and `ury` denote the upper-right corner, of the glyph bounding box. 
+
+The glyph bounding box is the smallest rectangle, oriented with the axes of the glyph coordinate system, that completely encloses all marks placed on the page as a result of executing the glyph’s description. The declared bounding box shall be correct—in other words, sufficiently large to enclose the entire glyph. If any marks fall outside this bounding box, the result is unpredictable.
+
+A glyph description that begins with the **`d1`** operator should not execute any operators that set the colour (or other colour-related parameters) in the graphics state; any use of such operators shall be ignored. The glyph description is executed solely to determine the glyph’s shape. Its colour shall be determined by the graphics state  in  effect  each  time  this  glyph  is  painted  by  a  text-showing operator. For the same reason, the glyph description shall not include an image; however, an image mask is acceptable, since it merely defines a region of the page to be painted with the current colour.
+
+This operator shall be used only in a content stream appearing in a Type 3 font’s **CharProcs** dictionary.
+
 #### Source
 * [PDF Specification / Table 113 – Type 3 font operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G8.1853938)
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L2881](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L2881)
@@ -818,6 +831,20 @@ This operator shall only be permitted in a content stream appearing in a Type 3 
 ### 50: setStrokeColorSpace (`CS`)
 #### Operands
 * `name`: *`string`*
+
+#### PDF Specification
+Set the current colour space to use for stroking operations. The operand `name` shall be a name object. If the colour space is one that can be  specified  by  a  name  and  no  additional  parameters (**DeviceGray**, **DeviceRGB**, **DeviceCMYK**, and certain cases of **Pattern**), the name may be specified  directly. Otherwise, it shall be a name defined in the **ColorSpace** subdictionary of the current resource dictionary; the associated value shall be an array describing the colour space.
+
+The names ***DeviceGray***, ***DeviceRGB***, ***DeviceCMYK***, and ***Pattern*** always identify the corresponding colour spaces directly; they never refer to resources in the ***ColorSpace*** subdictionary.
+
+The **`CS`** operator shall also set the current stroking colour to its initial value, which depends on the colour space:
+* In a **DeviceGray**, **DeviceRGB**, **CalGray**, or **CalRGB** colour space, the initial colour shall have all components equal to `0.0`.
+* In a **DeviceCMYK** colour space, the initial colour shall be `[ 0.0 0.0 0.0 1.0 ]`.
+* In a **Lab** or **ICCBased** colour space, the initial colour shall have all components equal to `0.0` unless that falls outside the intervals specified by the space’s **Range** entry, in which case the nearest valid value shall be 
+substituted.
+* In an **Indexed** colour space, the initial colour value shall be `0`.
+* In a **Separation** or **DeviceN** colour space, the initial tint value shall be `1.0` for all colorants.
+* In a **Pattern** colour space, the initial colour shall be a pattern object that causes nothing to be painted.
 
 #### Source
 * [PDF Specification / Table 74 – Colour Operators](https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf#G7.3793574)
