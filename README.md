@@ -4,6 +4,10 @@
 The list of operations contains all operations as defined in the PDF Specification that are used in PDF.js, aside with the operations that are only defined by PDF.js. The first group of operations show the operator, operands and description as defined in the PDF Specification. In the second group I tried to describe the operations as good as possible.
 
 ### Overview
+![Graphic objects](https://github.com/MeiKatz/pdfjs-docs/blob/master/Figure%209%20-%20Graphic%20objects.png "Graphic objects")
+
+(Copyright Adobe Systems Incorporated / Extracted from the PDF Specification: Figure 9 - Graphic objects)
+
 #### General graphics state
 * [`setLineWidth`](#2-setlinewidth-w) (`w`)
 * [`setLineCap`](#3-setlinecap-j) (`J`)
