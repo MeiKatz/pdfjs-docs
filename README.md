@@ -247,12 +247,12 @@ Set the specified parameters in the graphics state. `dictName` shall be the name
 
 #### Description
 As defined in the PDF specification, the following properties are stored on the graphic stack:
-* Paths
+* Stroke
   * line width
   * line cap style
   * line join style
-  * miter limit (=> stroke paths)
-  * line dash pattern (=> stroke paths)
+  * miter limit
+  * line dash pattern
 
 Saves the following properties:
 * font
