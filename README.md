@@ -57,7 +57,7 @@ The list of operations contains all operations as defined in the PDF Specificati
 * [`setHScale`](#35-sethscale-tz) (`Tz`)
 * [`setLeading`](#36-setleading-tl) (`TL`)
 * [`setFont`](#37-setfont-tf) (`Tf`)
-* [`setTextRenderingIntent`](#38-settextrenderingintent-tr) (`Tr`)
+* [`setTextRenderingMode`](#38-settextrenderingmode-tr) (`Tr`)
 * [`setTextRise`](#39-settextrise-ts) (`Ts`)
 
 #### Text positioning
