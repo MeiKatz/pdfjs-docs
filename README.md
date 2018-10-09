@@ -1327,7 +1327,7 @@ Represents a collection of path construction operations. Is there because of spe
 This would draw a rectangle (`19`) from the point (`0`, `0`) with a width of `5` and a height of `6`, than move the cursor (`13`) to the point (`6`, `0`) and afterwards draw a line (`14`) from this point to the point (`4`, `3`):
 * `rectangle`: [ `0`, `0`, `5`, `6` ]
 * `moveTo`: [ `6`, `0` ]
-* `lineTo`: [ `4`, `4` ]
+* `lineTo`: [ `4`, `3` ]
 
 #### Source
 * [https://github.com/mozilla/pdf.js/.../src/core/evaluator.js#L881](https://github.com/mozilla/pdf.js/blob/842e9206c059d36b9592e1e1b214985da6b57170/src/core/evaluator.js#L881)
